@@ -2,8 +2,8 @@
 
 Modern, responsive marketing, portfolio, and technical publication web application for an architecture, structural engineering, and turnkey construction studio (`construction-and-architecture-website`).
 
-**Repository:** [https://github.com/ovaiseqayoom/construction-and-architecture-website](https://github.com/ovaiseqayoom/construction-and-architecture-website)  
-**Homepage:** [https://github.com/ovaiseqayoom/construction-and-architecture-website](https://github.com/ovaiseqayoom/construction-and-architecture-website)
+**Production Site:** [https://www.nayaabengineering.com)  
+**Github:** [https://github.com/ovaiseqayoom/construction-and-architecture-website](https://github.com/ovaiseqayoom/construction-and-architecture-website)
 
 ---
 
