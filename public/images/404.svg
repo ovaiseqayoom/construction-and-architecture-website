@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="640" fill="url(#g)"/>
+  <rect width="1000" height="640" fill="url(#grid)"/>
+  <circle cx="680" cy="282" r="141" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2" stroke-dasharray="8 6"/>
+     <polygon points="160,510 480,154 820,510" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2.5"/>
+     <rect x="360" y="333" width="240" height="192" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="64" y1="552" x2="936" y2="552" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+  <text x="64" y="588" fill="#f8fafc" font-family="Inter,system-ui,sans-serif" font-size="23" font-weight="600" letter-spacing="0.06em">404 — BLUEPRINT NOT FOUND</text>
+  <text x="64" y="614" fill="#f59e0b" font-family="Inter,system-ui,sans-serif" font-size="13" font-weight="500" letter-spacing="0.14em">RETURN TO MAIN DIRECTORY</text>
+</svg>

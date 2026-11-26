@@ -1,0 +1,1172 @@
+.aboutPage {
+  --about-navy: #111113;
+  --about-text: #111113;
+  --about-text-muted: #52525B;
+  --about-border: #E4E4E7;
+  --about-surface: #FFFFFF;
+  --about-surface-alt: #F4F4F5;
+  --about-accent: #111113;
+  --about-accent-hover: #27272A;
+  --about-mustard: #FFBB0F;
+
+  width: 100%;
+  color: var(--about-text);
+  background: var(--about-surface);
+  font-family: var(--app-font-body);
+  overflow-x: clip;
+  box-sizing: border-box;
+}
+
+.heroWrapper {
+  width: 100%;
+  position: relative;
+  background: #111113;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.revealOnScroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.revealOnScroll.isVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.revealDelay1 {
+  transition-delay: 100ms;
+}
+
+.revealDelay2 {
+  transition-delay: 200ms;
+}
+
+.revealDelay3 {
+  transition-delay: 300ms;
+}
+
+.revealDelay4 {
+  transition-delay: 400ms;
+}
+
+.sectionEyebrow,
+.sectionEyebrowCenter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #111113;
+}
+
+.sectionEyebrowCenter {
+  justify-content: center;
+}
+
+.eyebrowSquare {
+  width: 6px;
+  height: 6px;
+  background-color: #FFBB0F;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  margin: 0 0 12px;
+  font-family: var(--app-font-body);
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #111113;
+}
+
+.sectionHeaderCentered {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.sectionHeaderLeft {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.sectionDesc {
+  color: #52525B;
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.canvasSection {
+  width: 100%;
+  background: #FFFFFF;
+  padding-block: clamp(2.5rem, 4.5vw, 5rem);
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 1px solid var(--about-border);
+}
+
+.canvasDisplayContainer {
+  position: relative;
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: none;
+}
+
+.canvasPicture {
+  width: 100%;
+  display: block;
+}
+
+.canvasBackdropImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.canvasOverlayContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50%;
+  padding-right: 0;
+  padding-top: clamp(1rem, 2.5vw, 2.5rem);
+  padding-bottom: clamp(1rem, 2.5vw, 2.5rem);
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.canvasHeader {
+  margin-bottom: clamp(0.5rem, 1vw, 0.85rem);
+}
+
+.canvasMainTitle {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #111113;
+  margin: 0.25rem 0 0 0;
+  max-width: 620px;
+}
+
+.canvasBodyBlock {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.45rem, 0.8vw, 0.75rem);
+  max-width: 600px;
+}
+
+.canvasSubtitle {
+  font-family: var(--app-font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: #111113;
+  margin: 0;
+}
+
+.canvasParagraph {
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #52525B;
+  margin: 0;
+}
+
+.canvasCtaRow {
+  margin-top: 0.35rem;
+}
+
+.pillOliveButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.4rem;
+  background: #111113;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pillOliveButton:hover {
+  background: #27272A;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.pillArrow {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.canvasMissionBox {
+  margin-top: clamp(0.35rem, 0.8vw, 0.8rem);
+  padding-top: clamp(0.35rem, 0.8vw, 0.75rem);
+  border-top: 1px solid #E4E4E7;
+}
+
+.missionTitle {
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #111113;
+  margin: 0 0 0.25rem 0;
+}
+
+.missionParagraph {
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #52525B;
+  margin: 0;
+}
+
+.overviewTextContent {
+  min-width: 0;
+}
+
+.bodyParagraph {
+  font-family: var(--app-font-body);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #52525B;
+  margin: 0 0 1.25rem 0;
+}
+
+.bodyParagraph strong {
+  color: var(--about-navy);
+}
+
+.dpiitCard {
+  background: #FFFFFF;
+  border: 1px solid var(--about-border);
+  border-left: 4px solid var(--about-mustard);
+  padding: clamp(24px, 3vw, 32px) clamp(20px, 2.5vw, 28px);
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 300ms ease, border-color 300ms ease;
+  min-width: 0;
+}
+
+.dpiitCard:hover {
+  transform: translateY(-3px);
+  border-color: #111113;
+}
+
+.dpiitHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dpiitIcon {
+  font-size: 2.2rem;
+  color: var(--about-mustard);
+  flex-shrink: 0;
+}
+
+.dpiitBadgeTag {
+  display: inline-block;
+  font-family: var(--app-font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--about-navy);
+  text-transform: none;
+  margin-bottom: 4px;
+}
+
+.dpiitTitle {
+  margin: 0;
+  font-family: var(--app-font-body);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--about-navy);
+}
+
+.dpiitText {
+  font-family: var(--app-font-body);
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--about-text-muted);
+  margin: 0 0 20px 0;
+}
+
+.dpiitMetaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--about-border);
+}
+
+.dpiitMetaItem {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.metaLabel {
+  font-family: var(--app-font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #78716C;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.metaValue {
+  font-family: var(--app-font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--about-navy);
+  margin-top: 2px;
+  word-break: break-word;
+}
+
+.visionSection {
+  width: 100%;
+  padding-block: clamp(3.5rem, 5.5vw, 6rem);
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--about-border);
+}
+
+.visionGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  width: 100%;
+}
+
+.visionImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border-radius: 0;
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+  background: #E8E4DC;
+}
+
+.visionPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visionImageWrapper:hover .visionPhoto {
+  transform: scale(1.04);
+}
+
+.visionContent {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.visionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--about-border);
+}
+
+.visionListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.itemNumber {
+  font-family: var(--app-font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111113;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.itemTitle {
+  font-family: var(--app-font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111113;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.itemDesc {
+  font-family: var(--app-font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #52525B;
+  margin: 0;
+}
+
+.mosaicSection {
+  width: 100%;
+  padding-block: clamp(3.5rem, 5.5vw, 6rem);
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--about-border);
+}
+
+.areaVisionImg   { grid-area: vision-img; }
+.areaMissionCard { grid-area: mission-card; }
+.areaValuesImg   { grid-area: values-img; }
+.areaVisionCard  { grid-area: vision-card; }
+.areaMissionImg  { grid-area: mission-img; }
+.areaValuesCard  { grid-area: values-card; }
+
+.mosaicGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "vision-img   mission-card  values-img"
+    "vision-card  mission-img   values-card";
+  grid-auto-rows: 1fr;
+  gap: 0;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid #E4E4E7;
+  width: 100%;
+}
+
+.mosaicTile {
+  position: relative;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mosaicImgTile {
+  padding: 0;
+  background: #111113;
+}
+
+.mosaicImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mosaicImgTile:hover .mosaicImg {
+  transform: scale(1.05);
+}
+
+.mosaicCard {
+  padding: clamp(1.75rem, 2.5vw, 2.5rem);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mosaicCardInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mosaicMissionCard {
+  background: #144c58;
+}
+
+.mosaicVisionCard {
+  background: #b45309;
+}
+
+.mosaicValuesCard {
+  background: #991b1b;
+}
+
+.mosaicCardBadge {
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.65rem;
+  display: inline-block;
+}
+
+.mosaicCardTitle {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.1875rem, 1.5vw, 1.375rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+}
+
+.mosaicCardText {
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+.mosaicValuesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem 1rem;
+}
+
+.mosaicValuesList li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.valueBullet {
+  width: 5px;
+  height: 5px;
+  background: #FFFFFF;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.factSheetSection {
+  width: 100%;
+  padding-block: clamp(3.5rem, 5.5vw, 6rem);
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--about-border);
+}
+
+.ledgerStrip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  border-top: 1px solid var(--about-border);
+  border-bottom: 1px solid var(--about-border);
+  padding-block: 2rem;
+  width: 100%;
+}
+
+.ledgerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  position: relative;
+}
+
+.ledgerItem:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: calc(clamp(1.5rem, 3vw, 3rem) * -0.5);
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: var(--about-border);
+}
+
+.ledgerLabel {
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #71717A;
+}
+
+.ledgerValue {
+  font-family: var(--app-font-body);
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: #111113;
+  line-height: 1.2;
+  margin: 0.15rem 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.ledgerValueCIN {
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111113;
+  margin: 0.25rem 0;
+  word-break: break-all;
+  font-variant-numeric: tabular-nums;
+}
+
+.ledgerDesc {
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #52525B;
+  margin: 0;
+}
+
+.capabilitiesSection {
+  width: 100%;
+  padding-block: clamp(3.5rem, 5.5vw, 6rem);
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--about-border);
+}
+
+.disciplinesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: 100%;
+  border-top: 1px solid var(--about-border);
+  padding-top: 2rem;
+}
+
+.disciplineCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.disciplineCol:hover {
+  transform: translateY(-2px);
+}
+
+.disciplineTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.15rem;
+}
+
+.disciplineNum {
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #71717A;
+}
+
+.disciplineTitle {
+  font-family: var(--app-font-body);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: #111113;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.disciplineDesc {
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #52525B;
+  margin: 0;
+}
+
+.teamRosterSection {
+  width: 100%;
+  padding-block: clamp(3.5rem, 5.5vw, 6rem);
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  background: #FFFFFF;
+}
+
+.sectionsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 4vw, 4.5rem);
+}
+
+.ctaSection {
+  width: 100%;
+  padding-block: clamp(4.5rem, 7vw, 7rem);
+  padding-inline: clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-top: 1px solid var(--about-border);
+}
+
+.editorialCtaWrap {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.editorialCtaTitle {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: #111113;
+  margin: 0.5rem 0 0.85rem 0;
+}
+
+.editorialCtaDesc {
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #52525B;
+  margin: 0 0 1.75rem 0;
+  max-width: 620px;
+}
+
+.editorialCtaActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.editorialCallBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.4rem;
+  background: transparent;
+  color: #111113;
+  border: 1px solid #E4E4E7;
+  border-radius: 9999px;
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.editorialCallBtn:hover {
+  border-color: #111113;
+  background: #F4F4F5;
+  color: var(--app-link-hover, #1B9ACD);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .visionGrid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.25rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .canvasDisplayContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+    background: #FFFFFF;
+  }
+
+  .canvasPicture {
+    width: 100%;
+    display: block;
+  }
+
+  .canvasBackdropImg {
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block;
+  }
+
+  .canvasOverlayContent {
+    position: relative;
+    inset: auto;
+    margin-top: -24%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
+    z-index: 2;
+  }
+
+  .canvasHeader {
+    margin-bottom: 1rem;
+  }
+
+  .canvasMainTitle {
+    font-size: clamp(1.25rem, 3.5vw, 1.45rem);
+    line-height: 1.2;
+    margin: 0.25rem 0 0 0;
+  }
+
+  .canvasBodyBlock {
+    gap: 0.85rem;
+    max-width: 100%;
+  }
+
+  .canvasSubtitle {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  .canvasParagraph {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
+
+  .canvasCtaRow {
+    display: none !important;
+  }
+
+  .canvasMissionBox {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+  }
+
+  .missionTitle {
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .missionParagraph {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
+
+  .visionGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ledgerStrip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem;
+  }
+
+  .ledgerItem:nth-child(2)::after {
+    display: none;
+  }
+
+  .disciplinesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .mosaicGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "mission-card mission-img"
+      "vision-card  vision-img"
+      "values-card  values-img";
+  }
+
+  .mosaicTile {
+    min-height: 260px;
+  }
+
+  .sectionHeaderCentered {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .canvasSection,
+  .mosaicSection,
+  .visionSection,
+  .factSheetSection,
+  .capabilitiesSection,
+  .teamRosterSection,
+  .ctaSection {
+    padding-inline: 1.25rem;
+    padding-block: 3rem;
+  }
+
+  .mosaicGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mission-card"
+      "mission-img"
+      "vision-card"
+      "vision-img"
+      "values-card"
+      "values-img";
+    border-radius: 0;
+  }
+
+  .mosaicTile {
+    min-height: 230px;
+  }
+
+  .mosaicCard {
+    padding: 2rem 1.35rem;
+  }
+
+  .mosaicValuesList {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .canvasOverlayContent {
+    margin-top: -22%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 1rem;
+  }
+
+  .canvasMainTitle {
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .canvasSubtitle {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .canvasParagraph {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
+
+  .visionImageWrapper {
+    aspect-ratio: 16 / 10;
+    max-height: 280px;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%) !important;
+    -webkit-clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%) !important;
+    border-radius: 0 !important;
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.1875rem, 4.5vw, 1.35rem);
+    line-height: 1.2;
+  }
+
+  .ledgerStrip {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-block: 1.5rem;
+  }
+
+  .ledgerItem {
+    border-bottom: 1px solid var(--about-border);
+    padding-bottom: 1rem;
+  }
+
+  .ledgerItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .ledgerItem::after {
+    display: none !important;
+  }
+
+  .ledgerValue {
+    font-size: 1.25rem;
+  }
+
+  .disciplinesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .disciplineCol {
+    border-bottom: 1px solid var(--about-border);
+    padding-bottom: 1rem;
+  }
+
+  .disciplineCol:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .editorialCtaTitle {
+    font-size: clamp(1.2rem, 4.5vw, 1.4rem);
+    line-height: 1.2;
+  }
+
+  .editorialCtaDesc {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .editorialCtaActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .editorialCallBtn,
+  .pillOliveButton {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .canvasSection,
+  .mosaicSection,
+  .visionSection,
+  .factSheetSection,
+  .capabilitiesSection,
+  .teamRosterSection,
+  .ctaSection {
+    padding-inline: 1rem;
+    padding-block: 2.25rem;
+  }
+
+  .mosaicCard {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .mosaicCardTitle {
+    font-size: 1.1875rem;
+  }
+
+  .mosaicCardText {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
+
+  .canvasOverlayContent {
+    margin-top: -18%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0.75rem;
+  }
+
+  .canvasMainTitle {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  .canvasSubtitle {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+
+  .canvasParagraph {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
+
+  .canvasBodyBlock {
+    gap: 0.85rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.1875rem;
+  }
+
+  .ledgerValue {
+    font-size: 1.15rem;
+  }
+
+  .ledgerValueCIN {
+    font-size: 0.75rem;
+  }
+
+  .dpiitMetaGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dpiitCard {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 319px) {
+  .visionSection,
+  .factSheetSection,
+  .capabilitiesSection,
+  .teamRosterSection,
+  .ctaSection {
+    padding-inline: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revealOnScroll {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}

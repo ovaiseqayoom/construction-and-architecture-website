@@ -1,0 +1,397 @@
+.section {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-block: clamp(1.75rem, 3vw, 2.75rem);
+  padding-inline: 0;
+  background: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--app-font-body);
+}
+
+.inner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.85rem);
+  padding-bottom: 0.85rem;
+  border-bottom: 1.5px solid #111113;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerSquare {
+  width: 8px;
+  height: 8px;
+  background: #111113;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--app-font-body);
+  font-size: clamp(1.1875rem, 1.6vw, 1.375rem);
+  font-weight: 500;
+  color: #111113;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.countBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  background: #FFFFFF;
+  border: 1px solid var(--app-border-subtle, #E4E4E7);
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #111113;
+  border-radius: 0;
+}
+
+.emptyState {
+  padding: 2.5rem;
+  text-align: center;
+  color: #78716C;
+  font-size: 0.92rem;
+  background: #FFFFFF;
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+}
+
+.rosterGrid {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.memberCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  aspect-ratio: 10 / 14;
+  overflow: hidden;
+  background: #111113;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.5rem, 2vw, 2.15rem) clamp(1.25rem, 1.8vw, 1.85rem);
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.memberCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+.bgImageStage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bgCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.memberCard:hover .bgCardImg {
+  transform: scale(1.05);
+}
+
+.blurredFace {
+  filter: blur(12px) brightness(0.9);
+  transform: scale(1.08);
+}
+
+.privacyShield {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.privacyMaskOverlay {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  background: rgba(15, 15, 15, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+
+.privacyMaskIcon {
+  font-size: 0.85rem;
+}
+
+.bgDarkOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 15, 0.0) 0%,
+    rgba(15, 15, 15, 0.18) 35%,
+    rgba(15, 15, 15, 0.75) 68%,
+    rgba(15, 15, 15, 0.95) 100%
+  );
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.memberCard:hover .bgDarkOverlay {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 15, 0.0) 0%,
+    rgba(15, 15, 15, 0.12) 35%,
+    rgba(15, 15, 15, 0.70) 68%,
+    rgba(15, 15, 15, 0.92) 100%
+  );
+}
+
+.cardContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.topMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.categoryTag {
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expPill {
+  font-family: var(--app-font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 2px 7px;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.titleGroup {
+  margin-top: auto;
+  margin-bottom: clamp(1.15rem, 1.8vw, 1.5rem);
+}
+
+.cardTitle {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.125rem, 1.4vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.underlineRule {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 0.6rem 0 0.45rem 0;
+  transition: background 0.3s ease;
+}
+
+.memberCard:hover .underlineRule {
+  background: #FFFFFF;
+}
+
+.designationText {
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+  margin: 0;
+  text-align: left;
+}
+
+.bottomFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.readMoreWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+}
+
+.readMoreText {
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.readMoreArrow {
+  font-size: 0.7rem;
+  color: #FFFFFF;
+  transition: transform 0.25s ease;
+}
+
+.memberCard:hover .readMoreWrapper {
+  gap: 12px;
+}
+
+.memberCard:hover .readMoreArrow {
+  transform: translateX(4px);
+}
+
+.romanNumber {
+  font-family: var(--app-font-body);
+  font-size: clamp(2.0rem, 2.6vw, 2.75rem);
+  font-weight: 500;
+  line-height: 0.85;
+  color: #FFFFFF;
+  opacity: 0.88;
+  letter-spacing: -0.02em;
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1200px) {
+  .rosterGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .rosterGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .memberCard {
+    min-height: 380px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.45rem;
+  }
+
+  .romanNumber {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rosterGrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .rosterGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gridItem {
+    min-width: 270px;
+    max-width: 290px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  .memberCard {
+    min-height: 380px;
+    aspect-ratio: 10 / 14;
+    padding: 1.6rem 1.35rem;
+  }
+
+  .cardTitle {
+    font-size: 1.4rem;
+  }
+
+  .romanNumber {
+    font-size: 2.6rem;
+  }
+}

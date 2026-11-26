@@ -1,0 +1,993 @@
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #0D0E0F;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: slideUpFullscreen 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.modalBackdrop::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modalBackdrop::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modalBackdrop::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+
+.modalBackdrop::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+@keyframes slideUpFullscreen {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalCard {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-width: 100%;
+  background: #0D0E0F;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* DESKTOP LEFT PANEL */
+.gradientCard {
+  background: #E8E3D8;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 0;
+  padding: clamp(1.75rem, 3.5vh, 3.25rem) clamp(2rem, 3.5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+.cardHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.avatarGroup {
+  position: relative;
+}
+
+.directorAvatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #171717;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  display: block;
+}
+
+.coordinatorBio {
+  font-family: var(--app-font-body);
+  font-size: 0.95rem;
+  color: #171717;
+  line-height: 1.45;
+  margin: 0 0 1rem 0;
+  max-width: 400px;
+}
+
+.coordinatorBio strong {
+  color: #171717;
+  font-weight: 700;
+}
+
+/* Prominent desktop 3D image */
+.modalArtContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  min-height: clamp(260px, 45vh, 420px);
+  margin-block: auto;
+  padding-block: 0.5rem;
+  overflow: hidden;
+}
+
+.modalArtImg {
+  width: 100%;
+  max-width: 520px;
+  max-height: clamp(300px, 54vh, 480px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modalArtImgLoading {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
+}
+
+.modalArtImgLoaded {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.modalArtContainer:hover .modalArtImgLoaded {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Desktop Modal Art Skeleton */
+.modalArtSkeleton {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  max-width: 460px;
+  height: 100%;
+  min-height: 280px;
+  max-height: clamp(300px, 50vh, 440px);
+  margin: auto;
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  animation: modalArtPulse 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+.modalArtSkeletonShimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  animation: modalArtShimmerSweep 1.8s infinite ease-in-out;
+}
+
+.modalArtSkeletonGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 65%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@keyframes modalArtPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes modalArtShimmerSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.socialIconsRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.socialCircleBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.socialCircleBtn:hover {
+  background: #ffbb0f;
+  border-color: #ffbb0f;
+  transform: translateY(-2px);
+  color: #0D0E0F;
+}
+
+.socialBtnFacebook:hover {
+  background: #1877F2 !important;
+  border-color: #1877F2 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.4);
+}
+
+.socialBtnInstagram:hover {
+  background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCB045 100%) !important;
+  border-color: #E4405F !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(225, 48, 108, 0.4);
+}
+
+.socialBtnPinterest:hover {
+  background: #E60023 !important;
+  border-color: #E60023 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(230, 0, 35, 0.4);
+}
+
+/* DESKTOP RIGHT PANEL (FORM) */
+.formPanel {
+  position: relative;
+  background: #0D0E0F;
+  padding: clamp(1.75rem, 3.5vh, 3.25rem) clamp(2.5rem, 5vw, 5.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: clamp(1.25rem, 2.5vh, 2.25rem);
+  right: clamp(1.5rem, 3vw, 3rem);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.modalCloseBtn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.08);
+}
+
+/* Hidden on desktop */
+.mobileArtContainer {
+  display: none !important;
+}
+
+.formHeading {
+  margin: 0 0 clamp(0.75rem, 1.8vh, 1.35rem) 0;
+  padding-right: 2.5rem;
+  line-height: 1.2;
+}
+
+.headingMuted {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  font-weight: 500;
+  color: #71717A;
+  letter-spacing: -0.015em;
+}
+
+.headingLight {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.015em;
+}
+
+.formElement {
+  display: flex;
+  flex-direction: column;
+}
+
+.honeypot {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+.serviceSection {
+  margin-bottom: clamp(0.75rem, 1.8vh, 1.35rem);
+}
+
+.serviceSectionTitle {
+  font-family: var(--app-font-body);
+  font-size: 0.84rem;
+  color: #98A2B3;
+  margin-bottom: 0.65rem;
+  display: block;
+}
+
+.servicesCheckboxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(6px, 1.1vh, 10px) 1.5rem;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  border: none;
+  padding: 3px 0;
+  outline: none;
+  transition: opacity 0.15s ease;
+}
+
+.checkboxItem:hover {
+  opacity: 0.9;
+}
+
+.customCheckbox {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.checkboxChecked {
+  background: #ffbb0f !important;
+  border-color: #ffbb0f !important;
+  box-shadow: none;
+}
+
+.checkIcon {
+  font-size: 0.68rem;
+  color: #0D0E0F;
+}
+
+.checkboxLabel {
+  font-family: var(--app-font-body);
+  font-size: 0.88rem;
+  font-weight: 450;
+  color: #E4E7EC;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.inputStack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.6rem, 1.4vh, 1.15rem);
+  margin-bottom: clamp(0.85rem, 1.8vh, 1.45rem);
+}
+
+.underlineGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.underlineLabel {
+  font-family: var(--app-font-body);
+  font-size: 0.8rem;
+  color: #98A2B3;
+  margin-bottom: 2px;
+}
+
+.underlineField {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
+  font-family: var(--app-font-body);
+  font-size: 0.95rem;
+  padding: clamp(3px, 0.6vh, 6px) 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.underlineField:focus {
+  border-bottom-color: #ffbb0f;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #FCA5A5;
+  font-size: 0.84rem;
+  font-family: var(--app-font-body);
+  margin-bottom: 1rem;
+}
+
+.errorIcon {
+  flex-shrink: 0;
+}
+
+/* Submit row right-aligned on desktop */
+.submitRow {
+  margin-top: clamp(0.75rem, 1.5vh, 1.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* Compact button with NO glowing effect, angular corners */
+.limeSubmitBtn {
+  width: auto;
+  min-width: 150px;
+  background: #ffbb0f;
+  color: #0D0E0F;
+  font-family: var(--app-font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border: 1px solid #ffbb0f;
+  border-radius: 0;
+  padding: 0.65rem 1.85rem;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
+  box-shadow: none; /* NO glow */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.01em;
+}
+
+.limeSubmitBtn:hover:not(:disabled) {
+  background: #e5a70d;
+  border-color: #e5a70d;
+  color: #0D0E0F;
+  box-shadow: none; /* NO glow */
+  transform: translateY(-1px);
+}
+
+.limeSubmitBtn:disabled {
+  background: rgba(255, 255, 255, 0.07);
+  color: #71717A;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  cursor: not-allowed;
+  transform: none;
+  opacity: 1;
+}
+
+/* Discreet legal links */
+.legalLinksRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 0.85rem;
+}
+
+.legalLink {
+  font-family: var(--app-font-body);
+  font-size: 0.72rem;
+  color: #64748B;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.legalLink:hover {
+  color: #94A3B8;
+  text-decoration: underline;
+}
+
+.legalDivider {
+  font-size: 0.65rem;
+  color: #475569;
+}
+
+/* Hidden on desktop */
+.mobileSocialRow {
+  display: none !important;
+}
+
+/* SUCCESS OVERLAY STATE (Clean, minimal, frosted over the form) */
+.successOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: rgba(13, 14, 15, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-sizing: border-box;
+  animation: successFadeIn 0.25s ease-out forwards;
+}
+
+@keyframes successFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.successCloseBtn {
+  position: absolute;
+  top: clamp(1.25rem, 2.5vh, 2.25rem);
+  right: clamp(1.5rem, 3vw, 3rem);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  z-index: 60;
+}
+
+.successCloseBtn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.06);
+}
+
+.successContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 360px;
+}
+
+.successCheckIcon {
+  width: 76px;
+  height: 76px;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.successTitle {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.015em;
+}
+
+.successDesc {
+  font-family: var(--app-font-body);
+  font-size: 0.95rem;
+  color: #94A3B8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* TABLET RESPONSIVENESS (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .gradientCard {
+    padding: 1.75rem;
+  }
+
+  .formPanel {
+    padding: 1.75rem 2rem;
+  }
+
+  .modalArtImg {
+    max-width: 380px;
+  }
+
+  .checkboxLabel {
+    white-space: normal;
+    font-size: 0.82rem;
+  }
+}
+
+/* MOBILE CLEAN VIEW (max-width: 768px) */
+@media (max-width: 768px) {
+  .modalBackdrop {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #0D0E0F !important;
+    z-index: 99999 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    display: block !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent !important;
+  }
+
+  .modalBackdrop::-webkit-scrollbar {
+    width: 4px !important;
+  }
+
+  .modalBackdrop::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  .modalBackdrop::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 9999px !important;
+  }
+
+  .modalBackdrop::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35) !important;
+  }
+
+  .modalCard {
+    position: relative !important;
+    width: 100vw !important;
+    min-height: 100dvh !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #0D0E0F !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  .modalGrid {
+    display: block !important;
+    width: 100% !important;
+    min-height: 100dvh !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Completely hide left card on mobile */
+  .gradientCard {
+    display: none !important;
+  }
+
+  .formPanel {
+    width: 100% !important;
+    min-height: 100dvh !important;
+    height: auto !important;
+    max-height: none !important;
+    border-radius: 0 !important;
+    background: #0D0E0F !important;
+    padding: 2.25rem 1.25rem 2.5rem 1.25rem !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    overflow: visible !important;
+  }
+
+  .modalCloseBtn {
+    position: fixed !important;
+    top: 14px !important;
+    right: 14px !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
+    z-index: 999999 !important;
+  }
+
+  /* 3D Customer Support indicating down above the title */
+  .mobileArtContainer {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 155px !important;
+    min-height: 155px !important;
+    margin: 0.5rem auto 0.75rem auto !important;
+  }
+
+  .mobileArtImg {
+    width: 100% !important;
+    max-width: 155px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.4)) !important;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .mobileArtImgLoading {
+    opacity: 0 !important;
+    transform: scale(0.95) translateY(6px) !important;
+  }
+
+  .mobileArtImgLoaded {
+    opacity: 1 !important;
+    transform: scale(1) translateY(0) !important;
+  }
+
+  .mobileArtSkeleton {
+    position: absolute;
+    inset: 0;
+    width: 140px;
+    height: 150px;
+    margin: auto;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    pointer-events: none;
+    animation: modalArtPulse 2s ease-in-out infinite;
+    z-index: 1;
+  }
+
+  .mobileArtSkeletonShimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.12) 50%,
+      transparent 100%
+    );
+    animation: modalArtShimmerSweep 1.8s infinite ease-in-out;
+  }
+
+  /* Title underneath image on mobile */
+  .formHeading {
+    margin: 0 0 1.15rem 0 !important;
+    padding-right: 0 !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+
+  .headingMuted,
+  .headingLight {
+    font-size: 1.35rem !important;
+  }
+
+  .formElement {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 auto !important;
+    height: auto !important;
+  }
+
+  .serviceSection {
+    margin-bottom: 1.25rem !important;
+  }
+
+  .serviceSectionTitle {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: #98A2B3 !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  /* Checkboxes strictly 1 item per line ("1 in 1 line"), perfectly aligned */
+  .servicesCheckboxGrid {
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+  }
+
+  .checkboxItem {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 3px 0 !important;
+    width: 100% !important;
+  }
+
+  .customCheckbox {
+    width: 18px !important;
+    height: 18px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .checkboxLabel {
+    font-size: 0.88rem !important;
+    color: #E4E7EC !important;
+    white-space: nowrap !important;
+    line-height: 1.35 !important;
+  }
+
+  .inputStack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    margin-bottom: 1.35rem !important;
+  }
+
+  .underlineLabel {
+    font-size: 0.78rem !important;
+    color: #98A2B3 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .underlineField {
+    padding: 6px 0 !important;
+    font-size: 0.95rem !important;
+  }
+
+  .submitRow {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  /* Compact angular submit button in #ffbb0f on mobile with NO glow */
+  .limeSubmitBtn {
+    width: auto !important;
+    min-width: 130px !important;
+    padding: 0.6rem 1.4rem !important;
+    font-size: 0.88rem !important;
+    border-radius: 0 !important;
+    font-weight: 600 !important;
+    background: #ffbb0f !important;
+    color: #0D0E0F !important;
+    border: 1px solid #ffbb0f !important;
+    box-shadow: none !important;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+  }
+
+  .limeSubmitBtn:disabled {
+    background: rgba(255, 255, 255, 0.07) !important;
+    color: #71717A !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .legalLinksRow {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .legalLink {
+    font-size: 0.72rem !important;
+    color: #64748B !important;
+  }
+
+  /* Social icons at bottom of mobile view - high visibility on dark bg */
+  .mobileSocialRow {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .socialCircleBtn {
+    width: 38px !important;
+    height: 38px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    color: #FFFFFF !important;
+    font-size: 0.92rem !important;
+    box-shadow: none !important;
+  }
+
+  .socialCircleBtn:hover {
+    background: #ffbb0f !important;
+    border-color: #ffbb0f !important;
+    color: #0D0E0F !important;
+  }
+
+  .successOverlay {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 999999 !important;
+    background: rgba(13, 14, 15, 0.92) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 2rem 1.5rem !important;
+  }
+
+  .successCloseBtn {
+    top: 14px !important;
+    right: 14px !important;
+  }
+
+  .successCheckIcon {
+    width: 68px !important;
+    height: 68px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .successTitle {
+    font-size: 1.5rem !important;
+  }
+
+  .successDesc {
+    font-size: 0.9rem !important;
+  }
+}

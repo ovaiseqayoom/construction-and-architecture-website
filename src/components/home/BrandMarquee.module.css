@@ -1,0 +1,191 @@
+.brandMarqueeSection {
+  width: 100%;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--app-border-subtle, #E4E4E7);
+  padding-block: var(--app-section-compact, clamp(1.75rem, 2.5vw, 2.25rem));
+  font-family: var(--app-font-body);
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+.brandMarqueeHeader {
+  text-align: center;
+  margin-bottom: clamp(1rem, 1.5vw, 1.25rem);
+  padding-inline: 1rem;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.brandMarqueeEyebrow {
+  display: inline-block;
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--app-text-secondary, #52525B);
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4;
+}
+
+.brandMarqueeViewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.brandMarqueeTrack {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: clamp(2.5rem, 4vw, 4.25rem);
+  animation: brandMarqueeScroll 32s linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+@keyframes brandMarqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.brandItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: none;
+}
+
+.logoHolder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  box-shadow: none;
+}
+
+.brandImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.brandSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.brandTextLockup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.brandPrimary {
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--app-text-primary, #111113);
+  letter-spacing: -0.01em;
+}
+
+.brandSecondary {
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--app-text-muted, #71717A);
+}
+
+.brandRating {
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--app-text-primary, #111113);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.starIcon {
+  color: #FBBC05;
+  font-size: 0.68rem;
+}
+
+.bottomLineContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+.thinBottomSliderLine {
+  width: 32px;
+  height: 2px;
+  background: var(--app-accent-primary, #FFBB0F);
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .brandMarqueeSection {
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+  }
+
+  .brandMarqueeTrack {
+    animation-duration: 24s;
+    gap: 1.75rem;
+  }
+
+  .brandItem {
+    gap: 0.55rem;
+  }
+
+  .logoHolder {
+    width: 22px;
+    height: 22px;
+  }
+
+  .brandPrimary {
+    font-size: 0.8125rem;
+  }
+
+  .brandSecondary,
+  .brandRating {
+    font-size: 0.68rem;
+  }
+
+  .bottomLineContainer {
+    margin-top: 0.75rem;
+  }
+
+  .thinBottomSliderLine {
+    width: 24px;
+    height: 2px;
+  }
+}

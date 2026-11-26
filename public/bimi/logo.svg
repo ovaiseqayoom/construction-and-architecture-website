@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 120 120">
+  <title>Structura Architecture &amp; Construction</title>
+  <rect x="0" y="0" width="120" height="120" fill="#0F172A"/>
+  <path d="M34 86 L34 46 L60 30 L86 46 L86 86" fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 86 L48 62 L72 62 L72 86" fill="none" stroke="#38BDF8" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

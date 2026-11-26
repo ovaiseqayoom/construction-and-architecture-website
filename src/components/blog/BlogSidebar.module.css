@@ -1,0 +1,469 @@
+.stickySidebar {
+  display: none;
+  width: 300px;
+  flex: 0 0 300px;
+  position: sticky;
+  top: calc(58px + 1.5rem);
+  height: calc(100vh - 7.5rem);
+  height: calc(100dvh - 7.5rem);
+  align-self: flex-start;
+  border-radius: 10px;
+  border: 1px solid #E4E4E7;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .stickySidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sidebarInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #F0F0F2;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.sectionLabel {
+  font-family: var(--app-font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  color: #71717A;
+  margin-bottom: 0.5rem;
+}
+
+.sidebarSection {
+  padding: 0.8rem 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── Table of Contents (always open, fills remaining height cleanly) ── */
+.tocBlock {
+  padding: 0.85rem 1.1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.tocHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111113;
+  flex-shrink: 0;
+}
+
+.tocIcon {
+  color: #71717A;
+  flex-shrink: 0;
+}
+
+.tocScrollArea {
+  margin-top: 0.65rem;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #E4E4E7 transparent;
+  padding-right: 0.25rem;
+}
+
+.tocScrollArea::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tocScrollArea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tocScrollArea::-webkit-scrollbar-thumb {
+  background: #E4E4E7;
+  border-radius: 9999px;
+}
+
+.tocScrollArea::-webkit-scrollbar-thumb:hover {
+  background: #D4D4D8;
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0.25rem;
+  border-left: 1px solid #E4E4E7;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+}
+
+.tocRow {
+  margin: 0;
+  padding: 0;
+}
+
+.tocItem {
+  width: 100%;
+  display: block;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  margin-left: -1.5px;
+  padding: 0.3rem 0 0.3rem 0.8rem;
+  cursor: pointer;
+  font-family: var(--app-font-body);
+  font-size: 0.775rem;
+  line-height: 1.4;
+  color: #71717A;
+  font-weight: 500;
+  transition: color 0.14s ease, border-color 0.14s ease;
+  user-select: none;
+}
+
+.tocItemSub {
+  padding-left: 1.35rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: #71717A;
+}
+
+.tocItem:hover {
+  background: transparent;
+  color: #111113;
+}
+
+.tocItem:focus-visible {
+  outline: 1.5px solid #111113;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.tocItemActive {
+  background: transparent;
+  color: #111113;
+  border-left-color: #111113;
+}
+
+.tocText {
+  display: block;
+  word-break: break-word;
+}
+
+.tocEmptyText {
+  font-size: 0.72rem;
+  color: #71717A;
+  padding-left: 0.8rem;
+  line-height: 1.4;
+}
+
+/* ── Article Metadata Rows ── */
+.metaRowGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.metaRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.metaLabel {
+  font-size: 0.72rem;
+  color: #71717A;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.metaValue {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #111113;
+  max-width: 10.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.metaLink {
+  text-decoration: none;
+  color: #111113;
+  transition: opacity 0.15s ease;
+}
+
+.metaLink:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Engineering Consultation CTA ── */
+.deskSection {
+  padding: 0.9rem 1.1rem 1rem;
+  background-color: #FAFAFA;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.deskTitle {
+  font-family: var(--app-font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111113;
+  margin: 0 0 0.25rem;
+}
+
+.deskDesc {
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: #52525B;
+  margin: 0 0 0.75rem;
+}
+
+.deskBtnPrimary {
+  width: 100%;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.54rem 0.85rem;
+  border-radius: 7px;
+  background-color: #111113;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.deskBtnPrimary:hover {
+  background-color: #27272A;
+}
+
+/* ── Skeleton Parity ── */
+@keyframes sidebarSkeletonShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeletonShimmer {
+  background: linear-gradient(90deg, #F4F4F5 25%, #E4E4E7 50%, #F4F4F5 75%);
+  background-size: 200% 100%;
+  animation: sidebarSkeletonShimmer 1.6s ease-in-out infinite;
+}
+
+.skeletonBar {
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* ── Mobile Floating Vertical Dots & Popup (< 1200px) ── */
+.mobileTocRoot {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .mobileTocRoot {
+    display: none;
+  }
+}
+
+.mobileTocBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 948;
+  background-color: rgba(17, 17, 19, 0.22);
+  backdrop-filter: blur(1.5px);
+}
+
+.mobileTocDotsBtn {
+  position: fixed;
+  left: 10px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4.5px;
+  width: 28px;
+  padding: 9px 0;
+  border-radius: 9999px;
+  border: 1px solid #E4E4E7;
+  background-color: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 4px 14px rgba(17, 17, 19, 0.09);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobileTocDotsBtn:active {
+  transform: scale(0.94);
+}
+
+.mobileTocDotsBtnActive {
+  border-color: #111113;
+  box-shadow: 0 6px 18px rgba(17, 17, 19, 0.14);
+}
+
+.mobileVerticalDot {
+  width: 4.5px;
+  height: 4.5px;
+  border-radius: 9999px;
+  background-color: #D4D4D8;
+  transition: background-color 0.16s ease, height 0.16s ease;
+}
+
+.mobileVerticalDotActive {
+  width: 4.5px;
+  height: 11px;
+  background-color: #111113;
+}
+
+.mobileTocPopup {
+  position: fixed;
+  left: 12px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 952;
+  width: min(275px, calc(100vw - 32px));
+  max-height: min(52dvh, 330px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  border: 1px solid #E4E4E7;
+  background-color: #FFFFFF;
+  box-shadow: 0 12px 32px rgba(17, 17, 19, 0.14);
+  overflow: hidden;
+  animation: mobileTocPopupIn 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes mobileTocPopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.mobileTocPopupBody {
+  padding: 0.7rem 0.85rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #E4E4E7 transparent;
+}
+
+.mobileTocList {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+
+.mobileTocList::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62rem;
+  bottom: 0.62rem;
+  width: 1px;
+  background-color: #E4E4E7;
+  pointer-events: none;
+}
+
+.mobileTocPopupItem {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0.3rem 0.15rem 0.3rem 1.05rem;
+  cursor: pointer;
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: #71717A;
+  font-weight: 500;
+  transition: color 0.14s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobileTocPopupItemSub {
+  padding-left: 1.45rem;
+  font-size: 0.69rem;
+  font-weight: 400;
+  color: #71717A;
+}
+
+.mobileTocPopupItem:hover,
+.mobileTocPopupItemActive {
+  background: transparent;
+  color: #111113;
+}
+
+.mobileTocLineDot {
+  position: absolute;
+  left: -3px;
+  top: 0.58rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: #D4D4D8;
+  border: 1.5px solid #FFFFFF;
+  box-sizing: border-box;
+  transition: background-color 0.16s ease, transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.mobileTocLineDotSub {
+  left: -2px;
+  top: 0.6rem;
+  width: 5px;
+  height: 5px;
+  border-width: 1px;
+}
+
+.mobileTocPopupItem:hover .mobileTocLineDot {
+  background-color: #71717A;
+}
+
+.mobileTocLineDotActive {
+  background-color: #111113 !important;
+  transform: scale(1.25);
+  box-shadow: 0 0 0 2px rgba(17, 17, 19, 0.12);
+}

@@ -1,0 +1,555 @@
+
+.reviewSection {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-top: var(--app-section-primary, clamp(2.5rem, 3.8vw, 3.75rem));
+  padding-bottom: clamp(2.25rem, 3.2vw, 3rem);
+  padding-inline: 0 !important;
+  background: var(--app-canvas-base, #FFFFFF);
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--app-font-body);
+  border-bottom: 1px solid var(--app-border-subtle, #E4E4E7);
+  contain: layout paint;
+}
+
+.container {
+  position: relative;
+  width: calc(100% - 8rem);
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .container {
+    width: calc(100% - 2 * clamp(2rem, 4vw, 3.5rem));
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 641px) {
+  .container {
+    width: calc(100% - 4rem);
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 481px) {
+  .container {
+    width: calc(100% - 2.5rem);
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 2rem);
+    padding-inline: 0;
+  }
+}
+
+/* Clean, Professional Section Header (No arrows) */
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 640px;
+}
+
+.sectionTagRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tagDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563EB;
+}
+
+.sectionTitle {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.googleBrand {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.headerGoogleLogo {
+  display: inline-block;
+  width: 1.12em;
+  height: 1.12em;
+  vertical-align: -0.15em;
+  margin-left: 0.35rem;
+  object-fit: contain;
+}
+
+.ratingSubline {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.15rem;
+  font-family: var(--app-font-body);
+}
+
+.ratingScore {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1;
+}
+
+.starsInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.headerStar {
+  font-size: 0.8rem;
+  color: #FBBC05;
+}
+
+.ratingCount {
+  font-size: 0.8125rem;
+  color: #64748B;
+  font-weight: 400;
+}
+
+/* Header Right: Direct Clean Action Links */
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.actionLinks {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.headerActionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #1A73E8;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.headerActionLink:hover {
+  color: #1557B0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.actionIcon {
+  font-size: 0.725rem;
+}
+
+.actionIconSmall {
+  font-size: 0.675rem;
+}
+
+.actionDivider {
+  color: #CBD5E1;
+  font-size: 0.75rem;
+}
+
+/* Minimal Progress Line */
+.progressTrack {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #E5E7EB;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  background: #2563EB;
+  transition: width 0.35s ease;
+  border-radius: 2px;
+}
+
+/* Slider Carousel Track & Viewport */
+.fullBleedSlider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  contain: layout;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.trackViewport {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  padding-left: max(4rem, calc((100% - 1440px) / 2));
+  box-sizing: border-box;
+  contain: layout;
+}
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .trackViewport {
+    padding-left: clamp(2rem, 4vw, 3.5rem);
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 641px) {
+  .trackViewport {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 481px) {
+  .trackViewport {
+    padding-left: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trackViewport {
+    padding-left: 1rem;
+  }
+}
+
+.trackViewport.grabbing {
+  cursor: grabbing;
+}
+
+/* ALIGN-ITEMS: FLEX-START ensures other cards DO NOT STRETCH when one card expands */
+.sliderTrack {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.slideItem {
+  box-sizing: border-box;
+  padding-right: 14px;
+  flex-shrink: 0;
+  min-width: 0;
+  contain: layout style;
+  align-self: flex-start;
+}
+
+/* Compact Review Chip — Natural Height (Only Expanded Card Grows) */
+.reviewChip {
+  position: relative;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 1.15rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+  height: 180px;
+  /* Locked uniform height: cards never enlarge */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reviewChip:hover {
+  background: #FFFFFF;
+  border-color: #94A3B8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Author Top Row */
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.95rem;
+  width: 100%;
+}
+
+/* Google Badge Mark in Card Header */
+.cardGoogleMark {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  flex-shrink: 0;
+  align-self: flex-start;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.reviewChip:hover .cardGoogleMark {
+  border-color: #CBD5E1;
+  transform: scale(1.05);
+}
+
+.cardGoogleLogo {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Outlined Quotation Mark directly before the review text */
+.leadQuoteIcon {
+  display: inline-block;
+  vertical-align: -2.5px;
+  margin-right: 0.4rem;
+  color: #94A3B8;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2px;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.reviewChip:hover .leadQuoteIcon {
+  color: #475569;
+  transform: rotate(180deg) scale(1.05);
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #E2E8F0;
+  border: 1px solid #CBD5E1;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatarLetter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.authorDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.nameLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.authorName {
+  font-family: var(--app-font-body);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.verifiedCheck {
+  font-size: 0.68rem;
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.starsAndDate {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cardStar {
+  font-size: 0.68rem;
+  color: #FBBC05;
+}
+
+.metaDot {
+  font-size: 0.65rem;
+  color: #9CA3AF;
+}
+
+.reviewTime {
+  font-family: var(--app-font-body);
+  font-size: 0.7rem;
+  color: #6B7280;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Pure Italic Review Quote */
+.reviewQuote {
+  margin: 0;
+  padding: 0;
+  font-family: var(--app-font-body);
+  font-style: italic;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #334155;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  quotes: "“" "”";
+  flex: 1;
+  overflow: hidden;
+}
+
+.reviewChipExpanded .reviewQuote {
+  overflow: visible;
+}
+
+/* Inline Read More text (No button styling) */
+.readMoreLink {
+  display: inline;
+  margin-left: 0.35rem;
+  color: #1A73E8;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.readMoreLink:hover {
+  color: #1557B0;
+}
+
+/* Small Bottom Timestamp */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.bottomDate {
+  font-family: var(--app-font-body);
+  font-size: 0.725rem;
+  color: #94A3B8;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding-bottom: 0.85rem;
+    margin-bottom: 1.15rem;
+  }
+
+  .headerRight {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .actionLinks {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .headerActionLink {
+    font-size: 0.775rem;
+  }
+
+  .slideItem {
+    padding-right: 12px;
+  }
+
+  .reviewChip {
+    height: 176px;
+    padding: 1rem 1rem;
+  }
+
+  .reviewQuote {
+    font-size: 0.825rem;
+    line-height: 1.5;
+  }
+
+  .leadQuoteIcon {
+    width: 15px;
+    height: 15px;
+    vertical-align: -2px;
+  }
+
+  .readMoreLink {
+    font-size: 0.78rem;
+  }
+}

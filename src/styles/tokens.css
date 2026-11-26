@@ -1,0 +1,116 @@
+:root {
+  --app-font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --app-font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --app-font-mono: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --app-font-heading: var(--app-font-body);
+  --app-font-serif: var(--app-font-body);
+  --app-font-primary: var(--app-font-body);
+  --app-font-meta: var(--app-font-body);
+  --app-font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --app-text-meta: 0.75rem;
+  --app-lh-meta: 1.333;
+
+  --app-text-caption: 0.84375rem;
+  --app-lh-caption: 1.428;
+
+  --app-text-body-size: 0.9375rem;
+  --app-lh-body: 1.5;
+
+  --app-text-logo: 1.0625rem;
+  --app-lh-logo: 1;
+
+  --app-text-lead: 1.1875rem;
+  --app-lh-lead: 1.55;
+
+  --app-text-figure: 1.875rem;
+  --app-lh-figure: 1;
+
+  --app-text-h3: clamp(1rem, 1.2vw, 1.125rem);
+  --app-lh-h3: 1.35;
+
+  --app-text-h4: 0.9375rem;
+  --app-lh-h4: 1.4;
+
+  --app-text-h2: clamp(1.5rem, 2.2vw, 1.875rem);
+  --app-lh-h2: 1.2;
+
+  --app-text-h1: clamp(2rem, 3.2vw, 2.75rem);
+  --app-lh-h1: 1.1;
+
+  --app-canvas-base: #FFFFFF;
+  --app-canvas-subtle: #F7F7F8;
+  --app-canvas-card: #FFFFFF;
+  --app-canvas-card-alt: #FAFAFA;
+  --app-canvas-dark: #111113;
+
+  --app-bg-page: var(--app-canvas-base);
+  --app-bg-surface: var(--app-canvas-subtle);
+  --app-bg-card: var(--app-canvas-card);
+  --app-bg-dark: var(--app-canvas-dark);
+  --app-card-bg: var(--app-canvas-card);
+
+  --app-text-primary: #111113;
+  --app-text-secondary: #52525B;
+  --app-text-muted: #71717A;
+  --app-text-inverse: #FFFFFF;
+  --app-text-inverse-sub: #A1A1AA;
+
+  --app-text-title: var(--app-text-primary);
+  --app-text-body: var(--app-text-secondary);
+  --app-text-subtle: var(--app-text-muted);
+  --app-text-light: var(--app-text-inverse);
+  --app-text-white: #FFFFFF;
+
+  --app-accent-primary: #FFBB0F;
+  --app-accent-hover: #E5A80D;
+  --app-accent-bright: #FFBB0F;
+  --app-accent-subtle: rgba(255, 187, 15, 0.12);
+  --app-link-hover: #1B9ACD;
+  --app-accent-cyan: #1B9ACD;
+
+  --app-brand-primary: var(--app-accent-primary);
+  --app-brand-hover: var(--app-accent-hover);
+  --app-brand-soft: var(--app-accent-subtle);
+  --app-accent-terracotta: var(--app-accent-primary);
+  --app-accent-terracotta-hover: var(--app-accent-hover);
+  --app-accent-terracotta-soft: var(--app-accent-subtle);
+  --app-accent-gold-dark: #D99B00;
+
+  --app-border-subtle: #E4E4E7;
+  --app-border-hover: #D4D4D8;
+  --app-border-strong: #111113;
+  --app-border-hairline: rgba(17, 17, 19, 0.08);
+  --app-border-active: var(--app-accent-primary);
+  --app-border-inverse: rgba(255, 255, 255, 0.14);
+  --app-glass-border: rgba(255, 255, 255, 0.14);
+
+  --app-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --app-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.04);
+  --app-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+  --app-container-max: 1440px;
+  --app-container-pad: 4rem;
+  --app-container-pad-mobile: 1.25rem;
+  --app-reading-max: 820px;
+
+  --app-section-hero: clamp(6.5rem, 8.5vw, 8rem);
+  --app-section-primary: clamp(2.75rem, 4.2vw, 4rem);
+  --app-section-compact: clamp(1.75rem, 2.5vw, 2.25rem);
+  --app-section-pad-y: clamp(2.75rem, 4.2vw, 4rem);
+
+  --app-radius-sm: 6px;
+  --app-radius-md: 12px;
+  --app-radius-lg: 20px;
+  --app-radius-full: 9999px;
+
+  --app-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --app-transition-fast: 150ms var(--app-ease-out);
+  --app-transition-base: 250ms var(--app-ease-out);
+
+  --app-z-base: 0;
+  --app-z-card: 1;
+  --app-z-sticky: 50;
+  --app-z-overlay: 90;
+  --app-z-modal: 100;
+}

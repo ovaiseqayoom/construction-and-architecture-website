@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
+  <rect x="4" y="4" width="40" height="40" rx="9" fill="#0F172A"/>
+  <path d="M13 35V20L24 13L35 20V35" stroke="#FFFFFF" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.5 35V25.5H28.5V35" stroke="#38BDF8" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="56" y="29" fill="#0F172A" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" letter-spacing="0.08em">STRUCTURA</text>
+  <text x="57" y="40" fill="#64748B" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="0.18em">ARCHITECTURE &amp; BUILD</text>
+</svg>

@@ -1,0 +1,1092 @@
+.sectionWrapper {
+  width: 100%;
+  margin: 0;
+  padding-block: var(--app-section-primary, clamp(2.75rem, 4.2vw, 4rem));
+  padding-inline: 4rem;
+  box-sizing: border-box;
+  background-color: var(--app-canvas-base, #FFFFFF);
+  border-bottom: 1px solid var(--app-border-subtle, #E4E4E7);
+  font-family: var(--app-font-body);
+  overflow: hidden;
+}
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .sectionWrapper {
+    padding-inline: clamp(2rem, 4vw, 3.5rem);
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 641px) {
+  .sectionWrapper {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 481px) {
+  .sectionWrapper {
+    padding-inline: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionWrapper {
+    padding-inline: 1rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(1.75rem, 2.8vw, 2.25rem);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--app-border-subtle, #E4E4E7);
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.eyebrowRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--app-text-secondary, #52525B);
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.eyebrowSquare {
+  width: 6px;
+  height: 6px;
+  background: var(--app-accent-bright, #FFBB0F);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.sectionHeading {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.25rem, 1.6vw, 1.45rem);
+  font-weight: 500;
+  color: var(--app-text-primary, #111113);
+  letter-spacing: -0.015em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.viewAllBtnHeader {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: #111113;
+  border: 1.5px solid #111113;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.viewAllBtnHeader:hover {
+  background: var(--app-accent-primary, #FFBB0F);
+  border-color: var(--app-accent-primary, #FFBB0F);
+  color: #111113;
+  transform: translateY(-2px);
+}
+
+.btnArrow {
+  font-size: 0.72rem;
+  transition: transform 0.2s ease;
+}
+
+.viewAllBtnHeader:hover .btnArrow {
+  transform: translateX(3px);
+}
+
+.recentGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.recentBigCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.recentBigImageLink {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.recentBigContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.recentBigTitle {
+  font-family: var(--app-font-body);
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  font-weight: 600;
+  color: var(--app-text-primary, #111113);
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+
+.recentBigCard:hover .recentBigTitle {
+  color: var(--app-link-hover, #1B9ACD);
+}
+
+.recentBigExcerpt {
+  font-family: var(--app-font-body);
+  font-size: 0.8125rem;
+  color: var(--app-text-secondary, #52525B);
+  line-height: 1.5;
+  margin: 0.35rem 0 0.45rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recentSideStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.recentSideCard {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.recentSideImageLink {
+  display: block;
+  width: 200px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.recentSideContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.recentSideTitle {
+  font-family: var(--app-font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--app-text-primary, #111113);
+  line-height: 1.35;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.15s ease;
+}
+
+.recentSideCard:hover .recentSideTitle {
+  color: var(--app-link-hover, #1B9ACD);
+}
+
+.recentSideExcerpt {
+  font-family: var(--app-font-body);
+  font-size: 0.78125rem;
+  color: #71717A;
+  line-height: 1.45;
+  margin: 0.25rem 0 0.35rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recentSideCard .authorRow {
+  margin-top: 0.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.authorNameText {
+  color: #71717A;
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  min-width: 0;
+}
+
+.titleWithArrowRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.titleArrowIcon {
+  font-size: 1.15rem;
+  color: var(--app-text-primary, #111113);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.15s ease;
+}
+
+.recentBigCard:hover .titleArrowIcon,
+.recentSideCard:hover .titleArrowIcon {
+  transform: translate(2px, -2px);
+  color: var(--app-link-hover, #1B9ACD);
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.45rem;
+  gap: 0.5rem;
+  min-height: 1.45rem;
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.48rem;
+  border-radius: 4px;
+  background: #F4F4F5;
+  border: 1px solid #E4E4E7;
+  color: #3F3F46;
+  font-family: var(--app-font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.015em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.categoryBadge:hover {
+  background: #E4E4E7;
+  color: #111113;
+  border-color: #D4D4D8;
+}
+
+.cardViewsCount {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  color: #71717A;
+  font-family: var(--app-font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.viewsIcon {
+  width: 11px;
+  height: 11px;
+  color: #A1A1AA;
+  flex-shrink: 0;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.4rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+  font-family: var(--app-font-body);
+  font-size: 0.72rem;
+  color: #71717A;
+  min-width: 0;
+  width: 100%;
+}
+
+.authorMetaDot {
+  display: inline;
+  color: #A1A1AA;
+  font-size: 0.65rem;
+}
+
+.pillsRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.45rem;
+  margin-top: auto;
+  min-width: 0;
+}
+
+.pillBadge {
+  font-family: var(--app-font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #52525B;
+  background: #F4F4F5;
+  border: 1px solid #E4E4E7;
+  padding: 0.1rem 0.42rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
+
+.pillBadge:hover {
+  background: #E4E4E7;
+  color: #111113;
+  border-color: #D4D4D8;
+}
+
+.recentSideCard .pillBadge {
+  font-size: 0.625rem;
+  padding: 0.08rem 0.38rem;
+}
+
+.metaTimeGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--app-font-body);
+  font-size: 0.6875rem;
+  color: var(--app-text-muted, #71717A);
+  white-space: nowrap;
+}
+
+.metaDateText {
+  font-family: var(--app-font-body);
+  font-size: 0.6875rem;
+  color: #6B7280;
+  white-space: nowrap;
+}
+
+.metaDot {
+  color: #9CA3AF;
+  font-size: 0.55rem;
+  line-height: 1;
+}
+
+.readingTimePill {
+  font-family: var(--app-font-body);
+  font-size: 0.72rem;
+  color: #71717A;
+  white-space: nowrap;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+.metaRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.desktopViewsPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  color: #71717A;
+  font-family: var(--app-font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.desktopViewsPill .viewsIcon {
+  width: 11px;
+  height: 11px;
+  color: #A1A1AA;
+  flex-shrink: 0;
+}
+
+.mobileViewsPill {
+  display: none;
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1672 / 941 !important;
+  overflow: hidden;
+  background: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #EAECF0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+}
+
+.bigCardViewsBadge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.24rem 0.6rem;
+  border-radius: 6px;
+  background: rgba(17, 17, 19, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  font-family: var(--app-font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  pointer-events: none;
+}
+
+.bigCardViewsIcon {
+  color: #E4E4E7;
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.cardViewsBadge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.12rem 0.42rem;
+  border-radius: 4px;
+  background: rgba(17, 17, 19, 0.78);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-family: var(--app-font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  line-height: 1;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.01em;
+}
+
+.compactViewsBadge,
+.recentSideCard .cardViewsBadge {
+  bottom: 5px;
+  left: 5px;
+  padding: 0.08rem 0.32rem;
+  border-radius: 3px;
+  font-size: 0.58rem;
+  gap: 0.2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.compactViewsBadge svg,
+.recentSideCard .cardViewsBadge svg {
+  width: 8px;
+  height: 8px;
+}
+
+.cardViewsIcon {
+  color: #FFFFFF;
+  opacity: 0.95;
+  flex-shrink: 0;
+}
+
+/* Hide overlay badge inside images on desktop (views are in eyebrowRow next to category) */
+.recentBigCard .cardViewsBadge,
+.recentSideCard .cardViewsBadge {
+  display: none;
+}
+
+.aspectBig {
+  aspect-ratio: 1672 / 941 !important;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+.recentBigCard:hover .cardImg,
+.recentSideCard:hover .cardImg {
+  transform: scale(1.02);
+}
+
+.cardImgLoading {
+  opacity: 0;
+}
+
+.cardImgLoaded {
+  opacity: 1;
+}
+
+.skeletonShimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #F3F4F6 0%, #E5E7EB 50%, #F3F4F6 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.imageFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #111113;
+  color: #FFFFFF;
+  font-family: var(--app-font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0;
+}
+
+.viewAllWrapperMobile {
+  display: none;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1023px) {
+  .recentGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .recentSideStack {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .viewAllBtnHeader {
+    display: none;
+  }
+
+  .viewAllWrapperMobile {
+    display: flex;
+  }
+
+  .viewAllBtnMobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 20px;
+    background: #111113;
+    border: 1.5px solid #111113;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-family: var(--app-font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .viewAllBtnMobile:hover {
+    background: var(--app-accent-primary, #FFBB0F);
+    border-color: var(--app-accent-primary, #FFBB0F);
+    color: #111113;
+  }
+
+  .recentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    gap: 1.75rem;
+  }
+
+  .recentBigCard {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .recentSideStack {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    gap: 1.25rem;
+  }
+
+  .recentSideCard {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .recentSideImageLink {
+    width: 96px;
+    min-width: 96px;
+    max-width: 96px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .recentSideContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    min-width: 0;
+    width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 0.25rem;
+  }
+
+  .authorRow {
+    margin-bottom: 0.15rem;
+    min-width: 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.75rem;
+  }
+
+  .recentBigTitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .recentBigExcerpt {
+    font-size: 0.78125rem;
+    line-height: 1.45;
+    margin: 0.25rem 0 0.5rem 0;
+    -webkit-line-clamp: 2;
+  }
+
+  .recentSideCard .titleLink {
+    width: 100%;
+  }
+
+  .recentSideCard .authorRow {
+    margin-top: 0.12rem;
+    margin-bottom: 0.15rem;
+    font-size: 0.72rem;
+  }
+
+  .recentSideCard .recentSideExcerpt {
+    display: none;
+  }
+
+  .recentSideCard .pillsRow {
+    margin-top: auto;
+  }
+
+  .recentSideTitle {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.35;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Mobile Recent Articles:
+     1. Category is hidden on both big card and 3 side cards
+     2. Eyebrow rows with category are hidden
+  */
+  .recentBigCard .cardViewsBadge,
+  .recentSideCard .cardViewsBadge {
+    display: none !important;
+  }
+
+  .recentBigCard .eyebrowRow,
+  .recentSideCard .eyebrowRow,
+  .recentBigCard .categoryBadge,
+  .recentSideCard .categoryBadge,
+  .recentBigCard .pillBadge,
+  .recentSideCard .pillBadge {
+    display: none !important;
+  }
+
+  /* Recent Side Card layout & spacing on mobile */
+  .recentSideCard {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    padding: 0.4rem 0 !important;
+  }
+
+  .recentSideImageLink {
+    width: 96px !important;
+    min-width: 96px !important;
+    max-width: 96px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .recentSideContent {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    gap: 0.2rem !important;
+  }
+
+  .recentSideTitle {
+    font-size: 0.84rem !important;
+    font-weight: 600 !important;
+    color: #111113 !important;
+    line-height: 1.3 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+  }
+
+  .titleArrowIcon {
+    width: 12px !important;
+    height: 12px !important;
+    flex-shrink: 0 !important;
+    margin-top: 2px !important;
+  }
+
+  .recentSideExcerpt {
+    display: none !important;
+  }
+
+  .bigCardViewsBadge {
+    bottom: 8px !important;
+    left: 8px !important;
+    padding: 0.18rem 0.48rem !important;
+    font-size: 0.65rem !important;
+    gap: 0.28rem !important;
+    border-radius: 5px !important;
+  }
+
+  .bigCardViewsIcon {
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  /* 3 Side Cards Footer on mobile:
+     Line 1: Author name (full name, clean)
+     Line 2: Views • Date • min read (1 single clean line!)
+  */
+  .recentSideCard .cardFooter {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.15rem !important;
+    margin-top: 0.1rem !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .recentSideCard .cardFooter .authorNameText {
+    display: block !important;
+    width: 100% !important;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    color: #52525B !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.25 !important;
+  }
+
+  .recentSideCard .cardFooter .authorMetaDot {
+    display: none !important;
+  }
+
+  .recentSideCard .metaRow {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0.25rem 0.32rem !important;
+    font-size: 0.68rem !important;
+    color: #71717A !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    line-height: 1.2 !important;
+  }
+
+  .recentSideCard .mobileViewsPill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.22rem !important;
+    color: #71717A !important;
+    font-size: 0.68rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+
+  .recentSideCard .mobileViewsPill .viewsIcon {
+    width: 10px !important;
+    height: 10px !important;
+    color: #A1A1AA !important;
+    flex-shrink: 0 !important;
+  }
+
+  .recentSideCard .desktopViewsPill {
+    display: none !important;
+  }
+
+  .recentSideCard .cardFooter .metaDateText,
+  .recentSideCard .cardFooter .readingTimePill {
+    font-size: 0.68rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    color: #71717A !important;
+  }
+
+  /* Recent Big Card Footer on mobile */
+  .recentBigCard .cardFooter {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
+    margin-top: 0.4rem !important;
+    padding-top: 0 !important;
+  }
+
+  .recentBigCard .cardFooter .authorNameText {
+    display: block !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    color: #52525B !important;
+  }
+
+  .recentBigCard .cardFooter .authorMetaDot {
+    display: none !important;
+  }
+
+  .recentBigCard .metaRow {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0.3rem !important;
+    font-size: 0.7rem !important;
+    color: #71717A !important;
+  }
+
+  .recentBigCard .mobileViewsPill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    color: #71717A !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+  }
+
+  .recentBigCard .mobileViewsPill .viewsIcon {
+    width: 11px !important;
+    height: 11px !important;
+    color: #A1A1AA !important;
+    flex-shrink: 0 !important;
+  }
+
+  .recentBigCard .desktopViewsPill {
+    display: none !important;
+  }
+
+  .pillsRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.4rem;
+    margin-top: auto;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .pillBadge {
+    font-size: 0.625rem;
+    padding: 0.08rem 0.38rem;
+  }
+
+  .recentSideCard .pillBadge {
+    font-size: 0.58rem;
+    padding: 0.06rem 0.32rem;
+  }
+
+  .metaTimeGroup {
+    font-size: 0.65rem;
+  }
+
+  .cardViewsBadge {
+    bottom: 6px;
+    left: 6px;
+    padding: 0.08rem 0.32rem;
+    font-size: 0.58rem;
+    gap: 0.18rem;
+    border-radius: 3px;
+  }
+
+  .cardViewsBadge svg {
+    width: 8px;
+    height: 8px;
+  }
+
+  .compactViewsBadge {
+    bottom: 4px;
+    left: 4px;
+    padding: 0.06rem 0.26rem;
+    font-size: 0.52rem;
+    gap: 0.15rem;
+    border-radius: 2px;
+  }
+
+  .compactViewsBadge svg {
+    width: 7px;
+    height: 7px;
+  }
+
+  .titleWithArrowRow {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .recentSideExcerpt {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .recentSideCard {
+    gap: 0.6rem;
+  }
+
+  .recentSideImageLink {
+    width: 82px;
+    min-width: 82px;
+    max-width: 82px;
+  }
+
+  .recentSideTitle {
+    font-size: 0.8125rem;
+  }
+
+  .pillBadge {
+    font-size: 0.58rem;
+    padding: 0.06rem 0.32rem;
+  }
+
+  .recentSideCard .pillBadge {
+    font-size: 0.55rem;
+    padding: 0.05rem 0.28rem;
+  }
+
+  .metaTimeGroup {
+    font-size: 0.625rem;
+  }
+
+  .recentSideCard .authorRow {
+    font-size: 0.6875rem;
+  }
+
+  .metaDateText,
+  .readingTimePill {
+    font-size: 0.625rem;
+  }
+}

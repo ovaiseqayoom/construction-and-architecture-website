@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "react",
+    "oxc",
+    "import"
+  ],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/no-object-type-as-default-prop": "off",
+    "react/iframe-missing-sandbox": "off",
+    "import/no-unassigned-import": "off",
+    "react/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "oxc/no-map-spread": "off",
+    "eqeqeq": "error",
+    "react/no-array-index-key": "off",
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["__studio_initialized"]
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "dist",
+    "node_modules",
+    "public"
+  ]
+}

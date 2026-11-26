@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#292524"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <path d="M120 555 L120 243 L624 122 L1032 230 L1032 555 Z" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.24" stroke-width="2"/>
+     <path d="M336 555 V297 H816 V555" fill="#f59e0b" fill-opacity="0.14" stroke="#f59e0b" stroke-width="2.5"/>
+     <line x1="576" y1="135" x2="576" y2="555" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <line x1="64" y1="587" x2="1136" y2="587" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
+  <text x="64" y="623" fill="#f8fafc" font-family="Inter,system-ui,sans-serif" font-size="24" font-weight="600" letter-spacing="0.06em">BUILDING ENVELOPE PHYSICS</text>
+  <text x="64" y="649" fill="#f59e0b" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="500" letter-spacing="0.14em">THERMAL &amp; ENERGY PERFORMANCE</text>
+</svg>
