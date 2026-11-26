@@ -536,7 +536,7 @@ export default function ContactForm({
                 maxLength={900}
                 value={formData.message}
                 onChange={handleInputChange}
-                placeholder="Describe your project requirements, location in J&K, estimated plot size, or any specific architectural and engineering goals..."
+                placeholder="Describe your project requirements, site location, estimated plot size, or any specific architectural and engineering goals..."
                 className={styles.textareaInput}
               />
             </div>

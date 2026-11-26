@@ -65,8 +65,8 @@ export default function MetaTags({
           finalImage.endsWith(".png")
             ? "image/png"
             : finalImage.endsWith(".jpg") || finalImage.endsWith(".jpeg")
-            ? "image/jpeg"
-            : "image/webp"
+              ? "image/jpeg"
+              : "image/webp"
         }
       />
       <meta property="og:image:width" content="1200" />

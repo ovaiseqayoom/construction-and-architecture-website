@@ -299,22 +299,22 @@ export default async function handler(req, res) {
       subject: `[New Inquiry] ${cleanService} — ${cleanName}`,
       ...(TEMPLATE_ADMIN_INQUIRY
         ? {
-            template: {
-              id: TEMPLATE_ADMIN_INQUIRY,
-              variables: {
-                CLIENT_NAME: cleanName,
-                SERVICE: cleanService,
-                CLIENT_EMAIL: cleanEmail,
-                CLIENT_PHONE: cleanPhone,
-                TIMESTAMP: timestamp,
-                MESSAGE: cleanMessage || "No additional message provided.",
-                WHATSAPP_URL: waLink,
-              },
+          template: {
+            id: TEMPLATE_ADMIN_INQUIRY,
+            variables: {
+              CLIENT_NAME: cleanName,
+              SERVICE: cleanService,
+              CLIENT_EMAIL: cleanEmail,
+              CLIENT_PHONE: cleanPhone,
+              TIMESTAMP: timestamp,
+              MESSAGE: cleanMessage || "No additional message provided.",
+              WHATSAPP_URL: waLink,
             },
-          }
+          },
+        }
         : {
-            text: `New inquiry from ${cleanName} (${cleanEmail}, ${cleanPhone}) for ${cleanService} at ${timestamp}:\n\n${cleanMessage}`,
-          }),
+          text: `New inquiry from ${cleanName} (${cleanEmail}, ${cleanPhone}) for ${cleanService} at ${timestamp}:\n\n${cleanMessage}`,
+        }),
     };
 
     const clientEmailPayload = {
@@ -324,19 +324,19 @@ export default async function handler(req, res) {
       subject: "Consultation Inquiry Received — Structura Architecture & Construction",
       ...(TEMPLATE_CLIENT_INQUIRY
         ? {
-            template: {
-              id: TEMPLATE_CLIENT_INQUIRY,
-              variables: {
-                CLIENT_NAME: cleanName,
-                SERVICE: cleanService,
-                PHONE: cleanPhone,
-                TIMESTAMP: timestamp,
-              },
+          template: {
+            id: TEMPLATE_CLIENT_INQUIRY,
+            variables: {
+              CLIENT_NAME: cleanName,
+              SERVICE: cleanService,
+              PHONE: cleanPhone,
+              TIMESTAMP: timestamp,
             },
-          }
+          },
+        }
         : {
-            text: `Hello ${cleanName},\n\nThank you for contacting Structura Architecture & Construction regarding ${cleanService}. We received your message on ${timestamp} and will respond shortly.`,
-          }),
+          text: `Hello ${cleanName},\n\nThank you for contacting Structura Architecture & Construction regarding ${cleanService}. We received your message on ${timestamp} and will respond shortly.`,
+        }),
     };
 
     const [adminResult, clientResult] = await Promise.allSettled([

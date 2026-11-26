@@ -76,7 +76,7 @@ export function buildRssXml(projects = []) {
       if (project.cover_image) {
         coverUrl = typeof project.cover_image === "string" ? project.cover_image : project.cover_image.url || "";
       }
-      if (!coverUrl) coverUrl = "/images/projects-hero.svg";
+      if (!coverUrl) coverUrl = "/images/projects/courtyard-villa.webp";
       if (coverUrl.startsWith("/")) coverUrl = `${SITE_URL}${coverUrl}`;
 
       const pubDate = project.created_at ? new Date(project.created_at).toUTCString() : now;

@@ -17,10 +17,10 @@ export const DEMO_PROJECTS = [
       "Turnkey structural shell, MEP coordination, and exterior cladding",
       "Custom oak acoustic millwork and recessed linear lighting",
     ],
-    cover_image: "/images/projects/courtyard-villa.svg",
+    cover_image: "/images/projects/courtyard-villa.webp",
     gallery_images: [
-      "/images/projects/courtyard-villa.svg",
-      "/images/projects/courtyard-villa-plan.svg",
+      "/images/projects/courtyard-villa.webp",
+      "/images/projects/courtyard-villa-interior.webp",
       "/images/home/cad-drafting.svg",
     ],
     hashtags: [
@@ -51,10 +51,10 @@ export const DEMO_PROJECTS = [
       "Fire egress, ADA accessibility, and municipal permit clearance",
       "Complete turnkey MEP commissioning and balancing",
     ],
-    cover_image: "/images/projects/civic-commons.svg",
+    cover_image: "/images/projects/civic-commons.webp",
     gallery_images: [
-      "/images/projects/civic-commons.svg",
-      "/images/home/structural-frame.svg",
+      "/images/projects/civic-commons.webp",
+      "/images/projects/courtyard-villa-interior.webp",
       "/images/services/structural-engineering.svg",
     ],
     hashtags: [
@@ -84,10 +84,10 @@ export const DEMO_PROJECTS = [
       "Retaining wall reinforcement and geotechnical footing schedules",
       "Exposed timber truss engineering and shop drawings",
     ],
-    cover_image: "/images/projects/alpine-retreat.svg",
+    cover_image: "/images/projects/alpine-retreat.webp",
     gallery_images: [
-      "/images/projects/alpine-retreat.svg",
-      "/images/home/quality-inspection.svg",
+      "/images/projects/alpine-retreat.webp",
+      "/images/projects/courtyard-villa.webp",
       "/images/services/architectural-design.svg",
     ],
     hashtags: [
@@ -117,11 +117,11 @@ export const DEMO_PROJECTS = [
       "Bespoke modular millwork shop drawings and installation",
       "Acoustic wall treatments and natural stone fabrication",
     ],
-    cover_image: "/images/projects/studio-fitout.svg",
+    cover_image: "/images/projects/studio-fitout.webp",
     gallery_images: [
-      "/images/projects/studio-fitout.svg",
+      "/images/projects/studio-fitout.webp",
+      "/images/projects/courtyard-villa-interior.webp",
       "/images/services/interior-modular-design.svg",
-      "/images/about/showcase.svg",
     ],
     hashtags: [
       "#InteriorArchitecture",
@@ -150,11 +150,11 @@ export const DEMO_PROJECTS = [
       "Pre-pour structural rebar and waterproofing QA logs",
       "Six commissioned apartments with individual HVAC heat-recovery units",
     ],
-    cover_image: "/images/projects/hillside-apartments.svg",
+    cover_image: "/images/projects/hillside-apartments.webp",
     gallery_images: [
-      "/images/projects/hillside-apartments.svg",
+      "/images/projects/hillside-apartments.webp",
+      "/images/projects/civic-commons.webp",
       "/images/services/turnkey-construction.svg",
-      "/images/home/services-showcase.svg",
     ],
     hashtags: [
       "#TurnkeyConstruction",
@@ -183,10 +183,10 @@ export const DEMO_PROJECTS = [
       "Custom steel knife-plate and timber truss detailing",
       "Complete turnkey build and hardscape courtyard",
     ],
-    cover_image: "/images/projects/timber-pavilion.svg",
+    cover_image: "/images/projects/timber-pavilion.webp",
     gallery_images: [
-      "/images/projects/timber-pavilion.svg",
-      "/images/about/vision.svg",
+      "/images/projects/timber-pavilion.webp",
+      "/images/projects/alpine-retreat.webp",
     ],
     hashtags: [
       "#TimberArchitecture",

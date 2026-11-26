@@ -8,7 +8,7 @@
     <link>https://example.com/projects</link>
     <description>Architectural design, structural engineering, and turnkey construction case studies.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 09:22:29 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 09:31:16 GMT</lastBuildDate>
     <atom:link href="https://example.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://example.com/studio-og-1200x630.png</url>
@@ -22,12 +22,12 @@
       <pubDate>Sat, 15 Nov 2025 10:00:00 GMT</pubDate>
       <category>Residential</category>
       <description><![CDATA[A two-story cast-in-place concrete and timber residence organized around a sunlit central atrium, featuring a 4.2m structural corner cantilever and passive thermal envelope.]]></description>
-      <enclosure url="https://example.com/images/projects/courtyard-villa.svg" length="0" type="image/svg+xml" />
-      <media:content url="https://example.com/images/projects/courtyard-villa.svg" medium="image" type="image/svg+xml">
+      <enclosure url="https://example.com/images/projects/courtyard-villa.webp" length="0" type="image/webp" />
+      <media:content url="https://example.com/images/projects/courtyard-villa.webp" medium="image" type="image/webp">
         <media:title><![CDATA[Cantilever Courtyard Villa]]></media:title>
         <media:description><![CDATA[A two-story cast-in-place concrete and timber residence organized around a sunlit central atrium, featuring a 4.2m structural corner cantilever and passive thermal envelope.]]></media:description>
       </media:content>
-      <content:encoded><![CDATA[<p>A two-story cast-in-place concrete and timber residence organized around a sunlit central atrium, featuring a 4.2m structural corner cantilever and passive thermal envelope.</p><p><img src="https://example.com/images/projects/courtyard-villa.svg" alt="Cantilever Courtyard Villa" /></p><p>#ResidentialArchitecture #CantileverStructure #PassiveSolar #TurnkeyBuild</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>A two-story cast-in-place concrete and timber residence organized around a sunlit central atrium, featuring a 4.2m structural corner cantilever and passive thermal envelope.</p><p><img src="https://example.com/images/projects/courtyard-villa.webp" alt="Cantilever Courtyard Villa" /></p><p>#ResidentialArchitecture #CantileverStructure #PassiveSolar #TurnkeyBuild</p>]]></content:encoded>
     </item>
     <item>
       <title>Northpoint Civic Commons</title>
@@ -36,12 +36,12 @@
       <pubDate>Wed, 08 Oct 2025 10:00:00 GMT</pubDate>
       <category>Commercial</category>
       <description><![CDATA[A three-level mixed-use studio and civic gallery anchored by a central shear-wall core, exposed glulam roof ribs, and acoustic perforated baffle ceilings.]]></description>
-      <enclosure url="https://example.com/images/projects/civic-commons.svg" length="0" type="image/svg+xml" />
-      <media:content url="https://example.com/images/projects/civic-commons.svg" medium="image" type="image/svg+xml">
+      <enclosure url="https://example.com/images/projects/civic-commons.webp" length="0" type="image/webp" />
+      <media:content url="https://example.com/images/projects/civic-commons.webp" medium="image" type="image/webp">
         <media:title><![CDATA[Northpoint Civic Commons]]></media:title>
         <media:description><![CDATA[A three-level mixed-use studio and civic gallery anchored by a central shear-wall core, exposed glulam roof ribs, and acoustic perforated baffle ceilings.]]></media:description>
       </media:content>
-      <content:encoded><![CDATA[<p>A three-level mixed-use studio and civic gallery anchored by a central shear-wall core, exposed glulam roof ribs, and acoustic perforated baffle ceilings.</p><p><img src="https://example.com/images/projects/civic-commons.svg" alt="Northpoint Civic Commons" /></p><p>#CommercialArchitecture #BIMCoordination #StructuralCore #CivicDesign</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>A three-level mixed-use studio and civic gallery anchored by a central shear-wall core, exposed glulam roof ribs, and acoustic perforated baffle ceilings.</p><p><img src="https://example.com/images/projects/civic-commons.webp" alt="Northpoint Civic Commons" /></p><p>#CommercialArchitecture #BIMCoordination #StructuralCore #CivicDesign</p>]]></content:encoded>
     </item>
     <item>
       <title>Ridgeline Timber Residence</title>
@@ -50,12 +50,12 @@
       <pubDate>Fri, 22 Aug 2025 10:00:00 GMT</pubDate>
       <category>Residential</category>
       <description><![CDATA[Stepped hillside family home anchored with socketed retaining walls, high-snow-load steel-and-timber roof trusses, and solar shading overhangs.]]></description>
-      <enclosure url="https://example.com/images/projects/alpine-retreat.svg" length="0" type="image/svg+xml" />
-      <media:content url="https://example.com/images/projects/alpine-retreat.svg" medium="image" type="image/svg+xml">
+      <enclosure url="https://example.com/images/projects/alpine-retreat.webp" length="0" type="image/webp" />
+      <media:content url="https://example.com/images/projects/alpine-retreat.webp" medium="image" type="image/webp">
         <media:title><![CDATA[Ridgeline Timber Residence]]></media:title>
         <media:description><![CDATA[Stepped hillside family home anchored with socketed retaining walls, high-snow-load steel-and-timber roof trusses, and solar shading overhangs.]]></media:description>
       </media:content>
-      <content:encoded><![CDATA[<p>Stepped hillside family home anchored with socketed retaining walls, high-snow-load steel-and-timber roof trusses, and solar shading overhangs.</p><p><img src="https://example.com/images/projects/alpine-retreat.svg" alt="Ridgeline Timber Residence" /></p><p>#HillsideEngineering #TimberTruss #RetainingWall #ResilientDesign</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>Stepped hillside family home anchored with socketed retaining walls, high-snow-load steel-and-timber roof trusses, and solar shading overhangs.</p><p><img src="https://example.com/images/projects/alpine-retreat.webp" alt="Ridgeline Timber Residence" /></p><p>#HillsideEngineering #TimberTruss #RetainingWall #ResilientDesign</p>]]></content:encoded>
     </item>
     <item>
       <title>Atelier Acoustic Interior Fit-Out</title>
@@ -64,12 +64,12 @@
       <pubDate>Thu, 12 Jun 2025 10:00:00 GMT</pubDate>
       <category>Interior &amp; Fit-Out</category>
       <description><![CDATA[Full interior architecture and CNC modular millwork transformation featuring fluted white-oak acoustics, terrazzo counters, and circadian lighting scenes.]]></description>
-      <enclosure url="https://example.com/images/projects/studio-fitout.svg" length="0" type="image/svg+xml" />
-      <media:content url="https://example.com/images/projects/studio-fitout.svg" medium="image" type="image/svg+xml">
+      <enclosure url="https://example.com/images/projects/studio-fitout.webp" length="0" type="image/webp" />
+      <media:content url="https://example.com/images/projects/studio-fitout.webp" medium="image" type="image/webp">
         <media:title><![CDATA[Atelier Acoustic Interior Fit-Out]]></media:title>
         <media:description><![CDATA[Full interior architecture and CNC modular millwork transformation featuring fluted white-oak acoustics, terrazzo counters, and circadian lighting scenes.]]></media:description>
       </media:content>
-      <content:encoded><![CDATA[<p>Full interior architecture and CNC modular millwork transformation featuring fluted white-oak acoustics, terrazzo counters, and circadian lighting scenes.</p><p><img src="https://example.com/images/projects/studio-fitout.svg" alt="Atelier Acoustic Interior Fit-Out" /></p><p>#InteriorArchitecture #AcousticDesign #ModularMillwork #LightingDesign</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>Full interior architecture and CNC modular millwork transformation featuring fluted white-oak acoustics, terrazzo counters, and circadian lighting scenes.</p><p><img src="https://example.com/images/projects/studio-fitout.webp" alt="Atelier Acoustic Interior Fit-Out" /></p><p>#InteriorArchitecture #AcousticDesign #ModularMillwork #LightingDesign</p>]]></content:encoded>
     </item>
     <item>
       <title>Terraced Courtyard Lofts</title>
@@ -78,12 +78,12 @@
       <pubDate>Sat, 19 Apr 2025 10:00:00 GMT</pubDate>
       <category>Infrastructure</category>
       <description><![CDATA[Six-unit multi-family residential build executed turnkey with central landscaped bioswales, acoustic party-wall assemblies, and milestone BOQ transparency.]]></description>
-      <enclosure url="https://example.com/images/projects/hillside-apartments.svg" length="0" type="image/svg+xml" />
-      <media:content url="https://example.com/images/projects/hillside-apartments.svg" medium="image" type="image/svg+xml">
+      <enclosure url="https://example.com/images/projects/hillside-apartments.webp" length="0" type="image/webp" />
+      <media:content url="https://example.com/images/projects/hillside-apartments.webp" medium="image" type="image/webp">
         <media:title><![CDATA[Terraced Courtyard Lofts]]></media:title>
         <media:description><![CDATA[Six-unit multi-family residential build executed turnkey with central landscaped bioswales, acoustic party-wall assemblies, and milestone BOQ transparency.]]></media:description>
       </media:content>
-      <content:encoded><![CDATA[<p>Six-unit multi-family residential build executed turnkey with central landscaped bioswales, acoustic party-wall assemblies, and milestone BOQ transparency.</p><p><img src="https://example.com/images/projects/hillside-apartments.svg" alt="Terraced Courtyard Lofts" /></p><p>#TurnkeyConstruction #MultiFamilyBuild #BOQTransparency #QualityAssurance</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>Six-unit multi-family residential build executed turnkey with central landscaped bioswales, acoustic party-wall assemblies, and milestone BOQ transparency.</p><p><img src="https://example.com/images/projects/hillside-apartments.webp" alt="Terraced Courtyard Lofts" /></p><p>#TurnkeyConstruction #MultiFamilyBuild #BOQTransparency #QualityAssurance</p>]]></content:encoded>
     </item>
     <item>
       <title>Timber &amp; Stone Community Pavilion</title>
@@ -92,12 +92,12 @@
       <pubDate>Wed, 05 Feb 2025 10:00:00 GMT</pubDate>
       <category>Institutional</category>
       <description><![CDATA[Lightweight cultural gathering hall framed in laminated Douglas fir columns, local stone plinth walls, and deep cantilevered rainwater canopies.]]></description>
-      <enclosure url="https://example.com/images/projects/timber-pavilion.svg" length="0" type="image/svg+xml" />
-      <media:content url="https://example.com/images/projects/timber-pavilion.svg" medium="image" type="image/svg+xml">
+      <enclosure url="https://example.com/images/projects/timber-pavilion.webp" length="0" type="image/webp" />
+      <media:content url="https://example.com/images/projects/timber-pavilion.webp" medium="image" type="image/webp">
         <media:title><![CDATA[Timber & Stone Community Pavilion]]></media:title>
         <media:description><![CDATA[Lightweight cultural gathering hall framed in laminated Douglas fir columns, local stone plinth walls, and deep cantilevered rainwater canopies.]]></media:description>
       </media:content>
-      <content:encoded><![CDATA[<p>Lightweight cultural gathering hall framed in laminated Douglas fir columns, local stone plinth walls, and deep cantilevered rainwater canopies.</p><p><img src="https://example.com/images/projects/timber-pavilion.svg" alt="Timber &amp; Stone Community Pavilion" /></p><p>#TimberArchitecture #CivicPavilion #ExposedJoinery #SustainableDesign</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>Lightweight cultural gathering hall framed in laminated Douglas fir columns, local stone plinth walls, and deep cantilevered rainwater canopies.</p><p><img src="https://example.com/images/projects/timber-pavilion.webp" alt="Timber &amp; Stone Community Pavilion" /></p><p>#TimberArchitecture #CivicPavilion #ExposedJoinery #SustainableDesign</p>]]></content:encoded>
     </item>
   </channel>
 </rss>

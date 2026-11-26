@@ -2,8 +2,8 @@ import React, { useState, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "../common/PageHero/PageHero";
 const ContactModal = lazy(() => import("../common/ContactModal/ContactModal"));
-const heroDesktop = "/images/hero-desktop.svg";
-const heroMobile = "/images/hero-mobile.svg";
+const heroDesktop = "/images/hero-desktop.webp";
+const heroMobile = "/images/hero-mobile.webp";
 import heroStyles from "../common/PageHero/PageHero.module.css";
 
 export default function Hero() {

@@ -60,7 +60,7 @@ export default function ServiceDetail() {
   const otherServices = SERVICES_DATA.filter((s) => s.slug !== slug);
   const currentTheme = SERVICE_THEMES[slug] || SERVICE_THEMES["architectural-design"];
 
-  const [openFaq, setOpenFaq] = useState(0); 
+  const [openFaq, setOpenFaq] = useState(0);
 
   const renderPortfolioCard = (item, index, total = 4) => {
     if (!item) return null;

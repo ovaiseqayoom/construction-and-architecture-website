@@ -8,8 +8,8 @@ import {
   FaShieldAlt,
   FaArrowRight,
 } from "react-icons/fa";
-const house3dDesktop = "/images/home/services-showcase.svg";
-const house3dMobile = "/images/hero-mobile.svg";
+const house3dDesktop = "/images/projects/courtyard-villa.webp";
+const house3dMobile = "/images/hero-mobile.webp";
 import styles from "./ServicesShowcase.module.css";
 
 export default function ServicesShowcase() {

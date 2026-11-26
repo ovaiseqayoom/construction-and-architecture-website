@@ -160,7 +160,7 @@ ${JSON.stringify({ "@context": "https://schema.org", "@graph": graphNodes }, nul
   const homeFeaturedCardsHtml = featuredProjects
     .map((p) => {
       const pSlug = p.slug || p.id;
-      const pCover = typeof p.cover_image === "string" ? p.cover_image : p.cover_image?.url || "/images/projects-hero.svg";
+      const pCover = typeof p.cover_image === "string" ? p.cover_image : p.cover_image?.url || "/images/projects/courtyard-villa.webp";
       const pTitle = escapeHtml(p.title || "Architectural Project");
       const pCat = escapeHtml(p.category || "Architecture");
       const pLoc = escapeHtml(p.location || "Design District");
@@ -185,7 +185,7 @@ ${JSON.stringify({ "@context": "https://schema.org", "@graph": graphNodes }, nul
         <span style="display:inline-block;padding:0.25rem 0.65rem;background:#1e293b;color:#38bdf8;border-radius:4px;font-size:0.8rem;font-weight:600;text-transform:uppercase;margin-bottom:0.75rem;">Structura Architecture &amp; Construction</span>
         <h1 style="font-size:clamp(2.25rem,5vw,3.5rem);font-weight:800;color:#09090b;line-height:1.15;margin:0 0 1rem 0;">Modern Architecture, Precision Construction</h1>
         <p style="font-size:1.15rem;color:#52525b;max-width:780px;line-height:1.6;margin:0 0 1.5rem 0;">Integrated architectural planning, ductile structural engineering, and transparent turnkey execution.</p>
-        <img src="/images/hero-desktop.svg" alt="Structura Architecture and Construction" width="1600" height="900" fetchpriority="high" style="width:100%;max-height:540px;object-fit:cover;border-radius:12px;display:block;" loading="eager" decoding="async" />
+        <img src="/images/hero-desktop.webp" alt="Structura Architecture and Construction" width="1600" height="900" fetchpriority="high" style="width:100%;max-height:540px;object-fit:cover;border-radius:12px;display:block;" loading="eager" decoding="async" />
       </section>
       <section style="margin-bottom:3.5rem;">
         <h2 style="font-size:1.85rem;font-weight:700;color:#09090b;margin-bottom:1.25rem;">Featured Projects</h2>

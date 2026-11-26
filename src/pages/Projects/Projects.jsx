@@ -23,8 +23,8 @@ import styles from "./Projects.module.css";
 const ProjectDrawer = lazy(() => import("../../components/projects/ProjectDrawer"));
 const ContactModal = lazy(() => import("../../components/common/ContactModal/ContactModal"));
 
-const heroDesktop = "/images/projects-hero.svg";
-const heroMobile = "/images/hero-mobile.svg";
+const heroDesktop = "/images/projects/civic-commons.webp";
+const heroMobile = "/images/hero-mobile.webp";
 
 const CATEGORIES = [
   "All",

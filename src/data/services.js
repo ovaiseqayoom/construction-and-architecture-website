@@ -41,7 +41,7 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        url: "/images/projects/courtyard-villa.svg",
+        url: "/images/projects/courtyard-villa.webp",
         title: "Cantilever Courtyard Villa",
         tag: "Residential Facade",
         caption: "Custom two-story residence combining cantilevered sunshades, natural stone plinths, and deep glazed openings.",
@@ -53,13 +53,13 @@ export const SERVICES_DATA = [
         caption: "Detailed multi-sheet CAD and Revit schedules aligning structural grids with partition tolerances.",
       },
       {
-        url: "/images/projects/timber-pavilion.svg",
+        url: "/images/projects/timber-pavilion.webp",
         title: "Architectural Timber Portico",
         tag: "Material Craft",
         caption: "Exposed structural timber eaves integrated cleanly with thermally broken glazing mullions.",
       },
       {
-        url: "/images/projects/alpine-retreat.svg",
+        url: "/images/projects/alpine-retreat.webp",
         title: "Sloped-Site Masterplanning",
         tag: "Topography",
         caption: "Stepped hillside residence sited along natural contours to minimize excavation and preserve drainage.",
@@ -153,7 +153,7 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        url: "/images/projects/studio-fitout.svg",
+        url: "/images/projects/studio-fitout.webp",
         title: "Acoustic Studio Lounge",
         tag: "Interior Architecture",
         caption: "Slatted oak acoustic paneling concealing HVAC returns and indirect cove illumination.",
@@ -171,7 +171,7 @@ export const SERVICES_DATA = [
         caption: "Engineered stone waterfall island with integrated under-cabinet linear task lighting.",
       },
       {
-        url: "/images/projects/courtyard-villa-plan.svg",
+        url: "/images/projects/courtyard-villa-interior.webp",
         title: "Daylit Atrium Stairwell",
         tag: "Natural Light",
         caption: "Double-height circulation gallery anchored by steel stringers and solid ash treads.",
@@ -282,7 +282,7 @@ export const SERVICES_DATA = [
         caption: "Balanced post-tensioned and steel box-beam framing enabling column-free corner glazing.",
       },
       {
-        url: "/images/projects/civic-commons.svg",
+        url: "/images/projects/civic-commons.webp",
         title: "Multi-Story Structural Core",
         tag: "Commercial Grid",
         caption: "Shear-wall core and rigid perimeter frames tuned to minimize floor vibration.",
@@ -382,7 +382,7 @@ export const SERVICES_DATA = [
         caption: "Coordinated formwork, vertical plumbing shafts, and masonry progression held to baseline schedules.",
       },
       {
-        url: "/images/projects/hillside-apartments.svg",
+        url: "/images/projects/hillside-apartments.webp",
         title: "Multi-Unit Turnkey Handover",
         tag: "Completed Build",
         caption: "Finished terraced apartments featuring acoustic double glazing and landscaped stormwater terraces.",

@@ -7,6 +7,12 @@ Modern, responsive marketing, portfolio, and technical publication web applicati
 
 ---
 
+## Full Home Page Preview
+
+![Structura Architecture & Construction — Full Home Page Screenshot](docs/home-full.png)
+
+---
+
 ## Key Capabilities
 
 - **Zero-Config Demo Mode:** Runs immediately with zero environment variables. When Supabase credentials are omitted, `src/lib/supabaseClient.js` safely returns `null` and every route renders curated built-in projects, technical articles, services, cost benchmarks, and team profiles.
@@ -48,6 +54,7 @@ npm run preview
 ```text
 construction-and-architecture-website/
 ├── api/                        # Optional Vercel serverless functions (SEO, OG, email workflows)
+├── docs/                       # Documentation assets including full Home page screenshot
 ├── public/                     # Static brand SVGs, favicons, OG assets, robots.txt, manifest
 │   └── images/                 # Local SVG illustrations for hero, projects, blog, services & team
 ├── scripts/                    # Build-time SEO & SSG pipeline

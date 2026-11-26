@@ -7,10 +7,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://example.com/images/projects/courtyard-villa.svg</image:loc>
+      <image:loc>https://example.com/images/projects/courtyard-villa.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://example.com/images/projects/courtyard-villa-plan.svg</image:loc>
+      <image:loc>https://example.com/images/projects/courtyard-villa-interior.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://example.com/images/home/cad-drafting.svg</image:loc>
@@ -23,10 +23,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://example.com/images/projects/civic-commons.svg</image:loc>
+      <image:loc>https://example.com/images/projects/civic-commons.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://example.com/images/home/structural-frame.svg</image:loc>
+      <image:loc>https://example.com/images/projects/courtyard-villa-interior.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://example.com/images/services/structural-engineering.svg</image:loc>
@@ -39,10 +39,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://example.com/images/projects/alpine-retreat.svg</image:loc>
+      <image:loc>https://example.com/images/projects/alpine-retreat.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://example.com/images/home/quality-inspection.svg</image:loc>
+      <image:loc>https://example.com/images/projects/courtyard-villa.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://example.com/images/services/architectural-design.svg</image:loc>
@@ -55,13 +55,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://example.com/images/projects/studio-fitout.svg</image:loc>
+      <image:loc>https://example.com/images/projects/studio-fitout.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/images/projects/courtyard-villa-interior.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://example.com/images/services/interior-modular-design.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://example.com/images/about/showcase.svg</image:loc>
     </image:image>
   </url>
 
@@ -71,13 +71,13 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://example.com/images/projects/hillside-apartments.svg</image:loc>
+      <image:loc>https://example.com/images/projects/hillside-apartments.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/images/projects/civic-commons.webp</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://example.com/images/services/turnkey-construction.svg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://example.com/images/home/services-showcase.svg</image:loc>
     </image:image>
   </url>
 
@@ -87,10 +87,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://example.com/images/projects/timber-pavilion.svg</image:loc>
+      <image:loc>https://example.com/images/projects/timber-pavilion.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://example.com/images/about/vision.svg</image:loc>
+      <image:loc>https://example.com/images/projects/alpine-retreat.webp</image:loc>
     </image:image>
   </url>
 </urlset>

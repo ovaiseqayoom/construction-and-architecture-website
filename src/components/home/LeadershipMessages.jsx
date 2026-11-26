@@ -86,7 +86,7 @@ export default function LeadershipMessages() {
 
           <div className={styles.headerRight}>
             <p className={styles.headingDesc}>
-              Executive commitment to engineering accuracy, disciplined execution, and client trust across J&K.
+              Executive commitment to engineering accuracy, disciplined execution, and client trust across every build.
             </p>
           </div>
         </header>

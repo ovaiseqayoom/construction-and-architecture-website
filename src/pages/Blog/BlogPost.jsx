@@ -61,9 +61,8 @@ function RelatedCardImage({ src, alt, title }) {
           title={title}
           loading="lazy"
           decoding="async"
-          className={`${styles.relatedSideImg} ${
-            isLoaded ? styles.relatedSideImgLoaded : styles.relatedSideImgLoading
-          }`}
+          className={`${styles.relatedSideImg} ${isLoaded ? styles.relatedSideImgLoaded : styles.relatedSideImgLoading
+            }`}
           onLoad={() => setIsLoaded(true)}
           onError={() => {
             setHasError(true);
@@ -95,9 +94,8 @@ function ArticleCoverImage({ src, alt, title }) {
           height="928"
           fetchPriority="high"
           decoding="async"
-          className={`${styles.featuredCoverImg} ${
-            isLoaded ? styles.featuredCoverImgLoaded : styles.featuredCoverImgLoading
-          }`}
+          className={`${styles.featuredCoverImg} ${isLoaded ? styles.featuredCoverImgLoaded : styles.featuredCoverImgLoading
+            }`}
           onLoad={() => setIsLoaded(true)}
           onError={() => {
             setHasError(true);
@@ -484,19 +482,19 @@ export default function BlogPost() {
       ...(mergedKeywords.length > 0 ? { keywords: mergedKeywords.join(", ") } : {}),
       ...(standards.length > 0
         ? {
-            about: standards.map((std) => ({
-              "@type": "Thing",
-              name: std,
-            })),
-          }
+          about: standards.map((std) => ({
+            "@type": "Thing",
+            name: std,
+          })),
+        }
         : {}),
       ...(tags.length > 0
         ? {
-            mentions: tags.map((tag) => ({
-              "@type": "Thing",
-              name: tag,
-            })),
-          }
+          mentions: tags.map((tag) => ({
+            "@type": "Thing",
+            name: tag,
+          })),
+        }
         : {}),
       speakable: {
         "@type": "SpeakableSpecification",
@@ -519,19 +517,19 @@ export default function BlogPost() {
       },
       ...(reviewerProfile
         ? {
-            reviewedBy: {
-              "@type": "Person",
-              "@id": `${SEO_ENTITY.siteUrl}/about#${reviewerProfile.id}`,
-              name: (reviewerProfile.name || "").replace(/^Er\.\s+/i, ""),
-              honorificPrefix: "Er.",
-              jobTitle: reviewerProfile.role,
-              description: reviewerProfile.bio,
-              image: reviewerProfile.avatar,
-              worksFor: {
-                "@id": `${SEO_ENTITY.siteUrl}/#organization`,
-              },
+          reviewedBy: {
+            "@type": "Person",
+            "@id": `${SEO_ENTITY.siteUrl}/about#${reviewerProfile.id}`,
+            name: (reviewerProfile.name || "").replace(/^Er\.\s+/i, ""),
+            honorificPrefix: "Er.",
+            jobTitle: reviewerProfile.role,
+            description: reviewerProfile.bio,
+            image: reviewerProfile.avatar,
+            worksFor: {
+              "@id": `${SEO_ENTITY.siteUrl}/#organization`,
             },
-          }
+          },
+        }
         : {}),
     };
     graph.push(techArticle);
@@ -768,9 +766,8 @@ export default function BlogPost() {
                           <span className={styles.faqQuestionText}>{faq.question}</span>
                           <ChevronDown
                             size={16}
-                            className={`${styles.faqChevron} ${
-                              isOpen ? styles.faqChevronOpen : ""
-                            }`}
+                            className={`${styles.faqChevron} ${isOpen ? styles.faqChevronOpen : ""
+                              }`}
                           />
                         </button>
                         {isOpen && (
