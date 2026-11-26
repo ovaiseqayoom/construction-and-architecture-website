@@ -10,7 +10,7 @@ const SERVICES_CARDS = [
     title: "Bespoke 3D Elevations & Spatial Masterplans",
     desc: "Comprehensive 2D spatial layouts, photorealistic 3D exterior elevations, and passive solar orientation.",
     link: "/services/architectural-design",
-    image: "/images/services/architectural-design.svg",
+    image: "/images/projects/courtyard-villa.webp",
     alt: "Structura 3D Architectural Design",
   },
   {
@@ -19,7 +19,7 @@ const SERVICES_CARDS = [
     title: "Timeless Residential & Commercial Interior Architecture",
     desc: "Precision factory-manufactured modular kitchens, custom wardrobes, and moisture-resistant millwork.",
     link: "/services/interior-modular-design",
-    image: "/images/services/interior-modular-design.svg",
+    image: "/images/projects/studio-fitout.webp",
     alt: "Structura Modular Interior Design",
   },
   {
@@ -28,7 +28,7 @@ const SERVICES_CARDS = [
     title: "Seismic-Compliant High-Performance Engineering",
     desc: "Code-verified ductile structural frames, retaining walls, and finite-element load modeling.",
     link: "/services/structural-engineering",
-    image: "/images/services/structural-engineering.svg",
+    image: "/images/home/structural-frame.webp",
     alt: "Structura Structural Engineering",
   },
   {
@@ -37,7 +37,7 @@ const SERVICES_CARDS = [
     title: "Full-Cycle Turnkey Civil Construction & Site Execution",
     desc: "End-to-end site execution, material procurement, and project management for commercial spaces and villas.",
     link: "/services/turnkey-construction",
-    image: "/images/services/turnkey-construction.svg",
+    image: "/images/home/quality-inspection.webp",
     alt: "Structura Turnkey Construction",
   },
 ];
