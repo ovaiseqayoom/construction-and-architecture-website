@@ -9,7 +9,7 @@ Modern, responsive marketing, portfolio, and technical publication web applicati
 
 ## Full Home Page Preview
 
-![Structura Architecture & Construction — Full Home Page Screenshot](docs/home-page-preview.png)
+![Structura Architecture & Construction — Full Home Page Screenshot](docs/home-showcase.png)
 
 ---
 
