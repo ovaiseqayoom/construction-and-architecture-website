@@ -8,7 +8,7 @@ import {
   FaBuilding,
   FaArrowRight,
 } from "react-icons/fa";
-const officeImage = "/images/about/studio-office.svg";
+const officeImage = "/images/about/studio-office.webp";
 import styles from "./AboutBento.module.css";
 
 const CREDENTIAL_PILLARS = [

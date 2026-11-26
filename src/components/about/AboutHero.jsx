@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import styles from "./AboutHero.module.css";
 
-const defaultHeroImage = "/images/about/studio-office.svg";
-const fallbackOffice = "/images/about/studio-office.svg";
+const defaultHeroImage = "/images/about/studio-office.webp";
+const fallbackOffice = "/images/about/studio-office.webp";
 
 const FEATURE_COLUMNS = [
   {

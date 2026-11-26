@@ -21,7 +21,7 @@ export const DEMO_PROJECTS = [
     gallery_images: [
       "/images/projects/courtyard-villa.webp",
       "/images/projects/courtyard-villa-interior.webp",
-      "/images/home/cad-drafting.svg",
+      "/images/home/cad-drafting.webp",
     ],
     hashtags: [
       "#ResidentialArchitecture",
@@ -210,7 +210,7 @@ export const DEMO_BLOGS = [
       "How proper stirrup anchorage, column confinement zones, and strong-column weak-beam sizing prevent brittle hinge failure during lateral ground motion.",
     bluf_summary:
       "Most field failures in concrete residences occur at beam-column joints and short columns rather than mid-span beams. Closely spaced 135-degree closed hooks and staggered rebar splices increase lateral drift resilience by over 35% with minimal added steel tonnage.",
-    cover_image_url: "/images/blog/seismic-detailing.svg",
+    cover_image_url: "/images/blog/seismic-detailing.webp",
     cover_image_alt: "Seismic concrete frame detailing and confinement diagram",
     author_id: "studio-0102",
     author_name: "Elena Cho",
@@ -289,7 +289,7 @@ Never terminate all vertical bars on a single plane; stagger splices so no more 
       "A practical breakdown of structural shell, envelope, MEP rough-in, and interior finish allocations so owners can budget accurately before mobilization.",
     bluf_summary:
       "Lump-sum per-square-foot quotes obscure specification trade-offs. Separating costs across Structure (48%), Finishes (24%), MEP (16%), and Roofing/Insulation (12%) prevents mid-project scope friction.",
-    cover_image_url: "/images/blog/boq-cost-breakdown.svg",
+    cover_image_url: "/images/blog/boq-cost-breakdown.webp",
     cover_image_alt: "Construction Bill of Quantities allocation chart",
     author_id: "studio-0103",
     author_name: "Marcus Patel",
@@ -389,7 +389,7 @@ Hold an unallocated 7–10% technical contingency strictly for subterranean surp
       "Detailing continuous exterior insulation wraps, thermally broken window subframes, and airtight vapor control layers across residential builds.",
     bluf_summary:
       "Uninsulated concrete slab edges and cantilevered balconies can undermine up to 30% of wall R-value. Continuous exterior sheathing paired with recessed triple glazing stabilizes indoor humidity and cuts peak heating/cooling loads.",
-    cover_image_url: "/images/blog/envelope-thermal.svg",
+    cover_image_url: "/images/blog/envelope-thermal.webp",
     cover_image_alt: "Thermal envelope section showing continuous insulation",
     author_id: "studio-0104",
     author_name: "Sophia Laurent",
@@ -428,7 +428,7 @@ Return rigid exterior insulation 30mm over window subframes to seal air infiltra
       "How lodging architectural, structural, and MEP sleeves inside a shared LOD 350 digital model saves weeks of downstream field delays.",
     bluf_summary:
       "Detecting HVAC trunk, plumbing stack, and recessed beam intersections prior to formwork saves 4–6% of direct site labor and preserves structural shear capacity.",
-    cover_image_url: "/images/blog/bim-workflow.svg",
+    cover_image_url: "/images/blog/bim-workflow.webp",
     cover_image_alt: "BIM clash detection coordination pipeline",
     author_id: "studio-0101",
     author_name: "Daniel Reyes",

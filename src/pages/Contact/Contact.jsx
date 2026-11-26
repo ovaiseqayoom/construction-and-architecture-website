@@ -443,7 +443,7 @@ export default function Contact() {
             <div className={styles.mapCard}>
               <div className={styles.mapFrameWrapper}>
                 <img
-                  src="/images/about/studio-office.svg"
+                  src="/images/about/studio-office.webp"
                   alt="Structura Studio Location — 123 Architecture Ave, Design District"
                   className={styles.mapIframe}
                   loading="lazy"

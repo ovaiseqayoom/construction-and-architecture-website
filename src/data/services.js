@@ -47,7 +47,7 @@ export const SERVICES_DATA = [
         caption: "Custom two-story residence combining cantilevered sunshades, natural stone plinths, and deep glazed openings.",
       },
       {
-        url: "/images/home/cad-drafting.svg",
+        url: "/images/home/cad-drafting.webp",
         title: "BIM & Working Drawing Coordination",
         tag: "Spatial Planning",
         caption: "Detailed multi-sheet CAD and Revit schedules aligning structural grids with partition tolerances.",
@@ -264,13 +264,13 @@ export const SERVICES_DATA = [
     ],
     gallery: [
       {
-        url: "/images/home/structural-frame.svg",
+        url: "/images/home/structural-frame.webp",
         title: "Seismic Frame Detailing",
         tag: "Lateral Systems",
         caption: "Confinement stirrup zones and lap-splice staggered layouts modeled for ductile energy dissipation.",
       },
       {
-        url: "/images/home/quality-inspection.svg",
+        url: "/images/home/quality-inspection.webp",
         title: "Pre-Pour Rebar Inspection",
         tag: "Field QA",
         caption: "Field engineers verifying cover blocks, development lengths, and coupler torque prior to concrete placement.",
@@ -394,7 +394,7 @@ export const SERVICES_DATA = [
         caption: "Continuous rigid thermal insulation paired with ventilated fiber-cement and stone rainscreen panels.",
       },
       {
-        url: "/images/about/studio-office.svg",
+        url: "/images/about/studio-office.webp",
         title: "Pre-Construction Cost Control",
         tag: "Transparent BOQ",
         caption: "Every trade package benchmarked and locked prior to breaking ground.",
@@ -493,7 +493,7 @@ export const SERVICES_DATA = [
         caption: "Standardized zoning summary tables, site key plans, and life-safety annotations.",
       },
       {
-        url: "/images/home/cad-drafting.svg",
+        url: "/images/home/cad-drafting.webp",
         title: "Topographic Contour Survey",
         tag: "Field Measurement",
         caption: "High-density spot levels mapping retaining wall heights, utility poles, and property corners.",

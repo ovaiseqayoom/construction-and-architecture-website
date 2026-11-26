@@ -3,9 +3,9 @@ import { FaSquare } from "react-icons/fa";
 import styles from "./WhyTrustUs.module.css";
 
 const TRUST_MOSAIC_IMAGES = {
-  seismic: "/images/home/structural-frame.svg",
-  turnkey: "/images/home/cad-drafting.svg",
-  quality: "/images/home/quality-inspection.svg",
+  seismic: "/images/home/structural-frame.webp",
+  turnkey: "/images/home/cad-drafting.webp",
+  quality: "/images/home/quality-inspection.webp",
 };
 
 export default function WhyTrustUs() {
