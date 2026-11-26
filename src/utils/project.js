@@ -36,10 +36,10 @@ export function normalizeProject(raw) {
   const rawGallery = Array.isArray(raw.gallery_images)
     ? raw.gallery_images
     : Array.isArray(raw.galleryImages)
-    ? raw.galleryImages
-    : Array.isArray(raw.gallery)
-    ? raw.gallery
-    : [];
+      ? raw.galleryImages
+      : Array.isArray(raw.gallery)
+        ? raw.gallery
+        : [];
 
   return {
     id: raw.id,
@@ -109,10 +109,10 @@ export function normalizeProjectGallery(project) {
   const rawGallery = Array.isArray(project.galleryImages)
     ? project.galleryImages
     : Array.isArray(project.gallery_images)
-    ? project.gallery_images
-    : Array.isArray(project.gallery)
-    ? project.gallery
-    : [];
+      ? project.gallery_images
+      : Array.isArray(project.gallery)
+        ? project.gallery
+        : [];
 
   const rawList =
     coverImageUrl && !rawGallery.some((item) => (typeof item === "string" ? item : item?.url) === coverImageUrl)

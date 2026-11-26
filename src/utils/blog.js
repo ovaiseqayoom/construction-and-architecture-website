@@ -25,7 +25,7 @@ export function getCachedBlogsSync() {
           return normalized;
         }
       }
-    } catch {}
+    } catch { }
   }
   if (!supabase && typeof import.meta !== "undefined" && !import.meta.env?.VITE_API_URL) {
     const demoNormalized = DEMO_BLOGS.map(normalizeBlog);
@@ -149,7 +149,7 @@ export async function fetchLiveBlogs(options = { forceRefresh: false }) {
             }
           }
         }
-      } catch {}
+      } catch { }
     }
 
     if (supabase) {
@@ -170,7 +170,7 @@ export async function fetchLiveBlogs(options = { forceRefresh: false }) {
                 "app_blogs_cache_v1",
                 JSON.stringify({ timestamp: Date.now(), data })
               );
-            } catch {}
+            } catch { }
           }
           return normalized;
         }

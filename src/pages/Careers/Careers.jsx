@@ -1,7 +1,7 @@
 // Page: Careers — src/pages/Careers/Careers.jsx
 import React, { useState, useEffect, useRef } from "react";
 import MetaTags from "../../components/common/SEO/MetaTags";
-import { PAGE_SEO } from "../../config/seo.config";
+import { PAGE_SEO, SEO_ENTITY } from "../../config/seo.config";
 import {
   FaAward,
   FaBuilding,
